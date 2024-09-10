@@ -21,9 +21,10 @@ Our CSVS are seperated in order using 1_,2_ and 3_\* for classification and regr
 1. **data_NRNB.xlsx**
    - Provided by Marc-Antoine from Natural Resources New Brunswick. It contains WESP-AC data (OF/F/S questionnaire answers only, no scores).
 2. **wespac_3.3.xlsx**
-   - WESP-AC Excel sheet (version 3.3).
+   - WESP-AC Excel sheet (version 3.3). <b><span style="color:red">Removed for privacy</span></b>
+
 3. **wespac_3.4.xlsx**
-   - Adapted WESP-AC Excel sheet (from version 3.3) with updated benefit scores.
+   - Adapted WESP-AC Excel sheet (from version 3.3) with updated benefit scores.<b><span style="color:red">Removed for privacy</span></b>
 4. **WESP_extra.xlsx**
    - Extra features for each site, data was collected outside the WESP-AC.
    
