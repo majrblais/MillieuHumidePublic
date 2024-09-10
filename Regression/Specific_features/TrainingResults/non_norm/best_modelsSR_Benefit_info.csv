@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_custom_imputed.csv,TensorFlow,,0.6224108318665695
+output_ffill_imputed.csv,TensorFlow,,0.5680483058930615
+output_interpolated.csv,TensorFlow,,0.3665489989637837
+output_iterative_imputed.csv,TensorFlow,,0.37817729137639017
+output_knn_imputed_custom.csv,TheilSenRegressor,"{'theilsenregressor__max_subpopulation': 1000, 'theilsenregressor__n_subsamples': None}",0.6059607456372632
+output_mean_imputed.csv,TensorFlow,,0.6562851976778519
+output_mode_imputed.csv,TensorFlow,,0.6709832325309283
+output_median_imputed.csv,TensorFlow,,0.9225833495430198
+output_bfill_imputed.csv,TensorFlow,,0.8316727045965883

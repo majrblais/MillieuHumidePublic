@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_interpolated.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 1.0, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 100}",0.4496875634043023
+output_median_imputed.csv,DecisionTreeRegressor,"{'decisiontreeregressor__criterion': 'absolute_error', 'decisiontreeregressor__max_features': 'sqrt', 'decisiontreeregressor__min_samples_split': 3, 'decisiontreeregressor__splitter': 'random'}",0.138452286778824
+output_bfill_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 1.0, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 100}",0.5298668058311444
+output_knn_imputed_custom.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.1, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 1}",0.4216881722858695
+output_mean_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 1.0, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 100}",0.5742363037888004
+output_custom_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.1, 'adaboostregressor__loss': 'linear', 'adaboostregressor__n_estimators': 1}",0.4300719482978971
+output_iterative_imputed.csv,KNeighborsRegressor,"{'kneighborsregressor__algorithm': 'brute', 'kneighborsregressor__leaf_size': 5, 'kneighborsregressor__metric': 'cosine', 'kneighborsregressor__n_neighbors': 2, 'kneighborsregressor__weights': 'uniform'}",0.9452478888781352
+output_ffill_imputed.csv,RandomForestRegressor,"{'randomforestregressor__criterion': 'friedman_mse', 'randomforestregressor__max_features': 'log2', 'randomforestregressor__min_samples_split': 5, 'randomforestregressor__n_estimators': 1}",0.3437829330237326
+output_mode_imputed.csv,RandomForestRegressor,"{'randomforestregressor__criterion': 'squared_error', 'randomforestregressor__max_features': 'log2', 'randomforestregressor__min_samples_split': 5, 'randomforestregressor__n_estimators': 1}",0.21029659812560236

@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_interpolated.csv,SGDRegressor,"{'sgdregressor__learning_rate': 'adaptive', 'sgdregressor__loss': 'epsilon_insensitive', 'sgdregressor__penalty': None, 'sgdregressor__warm_start': True}",0.9141216478781673
+output_median_imputed.csv,SGDRegressor,"{'sgdregressor__learning_rate': 'invscaling', 'sgdregressor__loss': 'epsilon_insensitive', 'sgdregressor__penalty': 'l2', 'sgdregressor__warm_start': True}",1.1735619256400158
+output_bfill_imputed.csv,SGDRegressor,"{'sgdregressor__learning_rate': 'adaptive', 'sgdregressor__loss': 'epsilon_insensitive', 'sgdregressor__penalty': 'l2', 'sgdregressor__warm_start': True}",0.9964696008934943
+output_knn_imputed_custom.csv,SGDRegressor,"{'sgdregressor__learning_rate': 'constant', 'sgdregressor__loss': 'epsilon_insensitive', 'sgdregressor__penalty': None, 'sgdregressor__warm_start': True}",1.1751023861021104
+output_mean_imputed.csv,TheilSenRegressor,"{'theilsenregressor__max_subpopulation': 1000, 'theilsenregressor__n_subsamples': None}",1.018233723593572
+output_custom_imputed.csv,SGDRegressor,"{'sgdregressor__learning_rate': 'invscaling', 'sgdregressor__loss': 'epsilon_insensitive', 'sgdregressor__penalty': 'l1', 'sgdregressor__warm_start': True}",1.154885855488912
+output_iterative_imputed.csv,TheilSenRegressor,"{'theilsenregressor__max_subpopulation': 1000, 'theilsenregressor__n_subsamples': None}",0.8580630177954285
+output_ffill_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.001, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 1}",0.4095957238644193
+output_mode_imputed.csv,SGDRegressor,"{'sgdregressor__learning_rate': 'invscaling', 'sgdregressor__loss': 'epsilon_insensitive', 'sgdregressor__penalty': 'l1', 'sgdregressor__warm_start': True}",1.1732312993953748

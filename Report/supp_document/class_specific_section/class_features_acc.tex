@@ -1,0 +1,44 @@
+\begin{longtable}{|p{2cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endhead
+
+PR & 0.9524 & 14 & OF26, F17, F21, F23, F24, F28, F29, F31, F34, F35, F43, F44, F45, F63 \\ \hline
+NR & 0.8571 & 23 & OF16, OF22, OF25, OF27, F1, F3b, F3c, F3d, F3e, F3g, F17, F22, F23, F24, F28, F31, F33, F34, F36, F43, F44, F45, F49 \\ \hline
+SR & 0.8095 & 6 & OF22, F35, F43, F44, F45, F49 \\ \hline
+WS & 1.0000 & 9 & OF22, F3c, F3d, F3e, F28, F43, F44, F45, F49 \\ \hline
+SFST & 0.9524 & 2 & F1, F43 \\ \hline
+PR Benefit & 0.9524 & 7 & OF19, OF22, OF24, F41, F48, F50, F52 \\ \hline
+NR Benefit & 0.9524 & 12 & OF9, OF10, OF19, OF20, OF21, OF22, OF23, OF24, F41, F50, F51, F52 \\ \hline
+SR Benefit & 1.0000 & 3 & OF19, OF21, F41 \\ \hline
+WS Benefit & 0.9524 & 2 & OF17, OF23 \\ \hline
+SFST Benefit & 0.5714 & 2 & OF22, OF28 \\ \hline
+\caption{Maximum Accuracy}
+\label{tab_class_spec:ensemble_class_acc}
+\end{longtable}
+
+% Table for proportionate accuracy
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endhead
+
+PR & 0.8571 & 2 & F43, F45 \\ \hline
+NR & 0.7619 & 2 & F43, F44 \\ \hline
+SR & 0.6190 & 2 & F43, F44 \\ \hline
+WS & 0.8571 & 2 & F43, F44 \\ \hline
+SFST & 0.9524 & 2 & F1, F43 \\ \hline
+PR Benefit & 0.9048 & 2 & OF24, F41 \\ \hline
+NR Benefit & 0.7619 & 2 & OF10, F41 \\ \hline
+SR Benefit & 0.9524 & 2 & OF19, F41 \\ \hline
+WS Benefit & 0.9524 & 2 & OF17, OF23 \\ \hline
+SFST Benefit & 0.5714 & 2 & OF22, OF28 \\ \hline
+\caption{Maximum Proportionate Accuracy}
+\label{tab_class_spec:ensemble_prop_class_acc}
+\end{longtable}

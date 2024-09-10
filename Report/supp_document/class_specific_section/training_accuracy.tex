@@ -1,0 +1,89 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|p{4cm}|c|}
+\hline
+\textbf{Function} & \textbf{Model} & \textbf{Data} & \textbf{Accuracy} \\
+\hline
+
+\multirow{8}{*}{PR} & RidgeClassifier & All Data & 95.2\% \\
+ & AdaBoostClassifier & BFill, FFill, Interpolated, KNN, Median, Mode & 95.2\% \\
+ & LogisticRegression & All Data & 95.2\% \\
+ & DecisionTreeClassifier & Custom, FFill & 95.2\% \\
+ & RandomForestClassifier & Custom, FFill, Interpolated, Iterative, KNN, Mean, Mode & 95.2\% \\
+ & SGDClassifier & Interpolated & 95.2\% \\
+ & MLPClassifier & Custom, Interpolated, KNN, Iterative, Mean & 95.2\% \\
+ & TensorFlow & Custom, FFill, Interpolated, Iterative, KNN, Mode & 95.2\% \\
+\hline
+
+\multirow{5}{*}{NR} & RidgeClassifier & All Data & 85.7\% \\
+ & LinearDiscriminantAnalysis & All Data & 85.7\% \\
+ & MLPClassifier & BFill, Interpolated, KNN & 85.7\% \\
+ & SGDClassifier & Interpolated, Mode & 85.7\% \\
+ & TensorFlow & Iterative & 85.7\% \\
+\hline
+
+\multirow{7}{*}{SR} & SGDClassifier & BFill, Mean & 95.2\% \\
+ & LogisticRegression & Custom & 90.5\% \\
+ & TensorFlow & FFill, Median & 95.2\% \\
+ & RidgeClassifier & Interpolated, Mode & 90.5\% \\
+ & KNeighborsClassifier & Interpolated, Iterative, Mode & 90.5\% \\
+ & MLPClassifier & Interpolated, Iterative, KNN & 95.2\% \\
+ & SVC & Interpolated, Iterative, Mode & 90.5\% \\
+\hline
+
+\multirow{2}{*}{WS} & GradientBoostingClassifier & BFill, Custom, FFill, Interpolated, Iterative, KNN, Mean, Mode & 100.0\% \\
+ & DecisionTreeClassifier & Median & 100.0\% \\
+\hline
+
+\multirow{9}{*}{SFST} & DecisionTreeClassifier & All Data & 95.2\% \\
+ & GradientBoostingClassifier & All Data & 95.2\% \\
+ & RandomForestClassifier & All Data & 95.2\% \\
+ & AdaBoostClassifier & All Data & 95.2\% \\
+ & LogisticRegression & All Data & 95.2\% \\
+ & MLPClassifier & BFill, FFill, Mean, Median & 95.2\% \\
+ & SVC & All Data & 95.2\% \\
+ & LinearDiscriminantAnalysis & All Data & 95.2\% \\
+ & SGDClassifier & FFill & 95.2\% \\
+\hline
+
+\multirow{8}{*}{PR Ben.} & DecisionTreeClassifier & BFill, Iterative, Mean, Median, Mode & 95.2\% \\
+ & SGDClassifier & All Data & 95.2\% \\
+ & KNeighborsClassifier & BFill, Custom, FFill, Iterative, Mean, Median, Mode & 95.2\% \\
+ & LogisticRegression & BFill, Custom, FFill, Iterative, Mean, Median, Mode & 95.2\% \\
+ & SVC & All Data & 95.2\% \\
+ & LinearDiscriminantAnalysis & BFill, Custom, FFill, Iterative, KNN, Mean, Median, Mode & 95.2\% \\
+ & TensorFlow & Mean & 95.2\% \\
+ & MLPClassifier & FFill, Interpolated, Mean, Mode & 95.2\% \\
+\hline
+
+NR Ben. & SVC & All Data & 100.0\% \\
+\hline
+
+\multirow{9}{*}{SR Ben.} & RidgeClassifier & All Data & 100.0\% \\
+ & DecisionTreeClassifier & All Data & 100.0\% \\
+ & GradientBoostingClassifier & All Data & 100.0\% \\
+ & MLPClassifier & All Data & 100.0\% \\
+ & LogisticRegression & All Data & 100.0\% \\
+ & SGDClassifier & All Data & 100.0\% \\
+ & GaussianNB & All Data & 100.0\% \\
+ & LinearDiscriminantAnalysis & All Data & 100.0\% \\
+ & SVC & Custom, FFill, Interpolated, Iterative, Mean, Mode & 100.0\% \\
+ & TensorFlow & Interpolated, Iterative, KNN, Median, Mode & 100.0\% \\
+\hline
+
+\multirow{7}{*}{WS Ben.} & RandomForestClassifier & Custom, FFill, Interpolated, Iterative & 95.24\% \\
+ & DecisionTreeClassifier & Mean, Iterative & 95.24\% \\
+ & MLPClassifier & KNN & 95.24\% \\
+ & AdaBoostClassifier & KNN & 95.24\% \\
+ & KNeighborsClassifier & KNN & 95.24\% \\
+ & SVC & KNN & 95.24\% \\
+ & TensorFlow & Mode & 95.24\% \\
+\hline
+
+SFST Ben. & MLPClassifier & Interpolated & 71.43\% \\
+\hline
+
+\end{tabular}
+\caption{Best Model Accuracies}
+\label{tab_class:spec_model_accuracies_best}
+\end{table}

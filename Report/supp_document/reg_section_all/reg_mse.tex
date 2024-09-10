@@ -1,0 +1,30 @@
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Model} & \textbf{Data} & \textbf{RMSE} \\
+\hline
+PR    & AdaBoostRegressor & mean & 0.12 \\
+\hline
+NR    & AdaBoostRegressor  & median & 0.15 \\
+\hline
+SR    & AdaBoostRegressor & median & 0.34 \\
+\hline
+WS    & AdaBoostRegressor & bfill & 0.25\\
+\hline
+SFST  & AdaBoostRegressor & ffill & 0.21 \\
+\hline
+PR Benefit & MLPRegressor &  mean & 1.30 \\
+\hline
+NR Benefit  & MLPRegressor & iterative & 0.38 \\
+\hline
+SR Benefit &  RANSACRegressor &  ffill & 0.91 \\
+\hline
+WS Benefit & AdaBoostRegressor & BFill & 1.25 \\
+\hline
+SFST Benefit & AdaBoostRegressor & Iterative & 0.49 \\
+\hline
+\end{tabular}
+\caption{Model MSE}
+\label{tab:model_reg_all_best}
+\end{table}

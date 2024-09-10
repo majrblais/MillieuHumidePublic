@@ -1,0 +1,68 @@
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endhead
+
+WS & 0.2578 & 9 & Provincial\_Class, Hydrogeomorphic\_Class, OF22, F22, F28, F31, F43, F44, F45 \\ \hline
+NR & 0.3627 & 47 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Vegetation\_Cover, Woody\_Canopy\_Cover, Moss\_Cover, Phragmites, Soil\_Type, Surface\_Water\_Present, Saturation\_Depth, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class, OF16, OF18, OF25, OF26, OF27, F1, F3\_a, F3\_b, F3\_c, F3\_d, F3\_e, F3\_f, F3\_g, F6, F17, F18, F20, F21, F22, F23, F24, F28, F31, F33, F34, F36, F43, F44, F45, F48, F49, F54, S5 \\ \hline
+PR & 0.3238 & 35 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Vegetation\_Cover, Woody\_Canopy\_Cover, Moss\_Cover, Phragmites, Soil\_Type, Surface\_Water\_Present, Saturation\_Depth, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class, OF22, OF26, OF27, F17, F20, F21, F23, F24, F28, F29, F31, F33, F34, F35, F36, F38, F43, F44, F45, F49, F63 \\ \hline
+SR & 0.6086 & 21 & Provincial\_Class, Federal\_Class, Regime, Moss\_Cover, Soil\_Type, Surface\_Water\_Present, Hydrogeomorphic\_Class, OF22, OF26, F17, F22, F28, F29, F31, F33, F34, F35, F36, F43, F44, F45 \\ \hline
+SFST & 0.4772 & 22 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Moss\_Cover, Surface\_Water\_Present, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class, F1, F3\_c, F3\_e, F3\_f, F14, F21, F24, F25, F29, F31, F34, F43, F47 \\ \hline
+WS Benefit & 0.8803 & 12 & Provincial\_Class, Federal\_Class, Vegetation\_Type, Moss\_Cover, Soil\_Type, Living\_Moss\_Depth, Hydrogeomorphic\_Class, OF17, OF18, OF23, OF24, F51 \\ \hline
+NR Benefit & 0.3845 & 15 & Moss\_Cover, Saturation\_Depth, Living\_Moss\_Depth, OF9, OF10, OF11, OF19, OF20, OF21, OF22, OF23, OF24, F41, F51, F52 \\ \hline
+PR Benefit & 0.7840 & 21 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Woody\_Canopy\_Cover, Moss\_Cover, Soil\_Type, Surface\_Water\_Present, Saturation\_Depth, Living\_Moss\_Depth, Organic\_Depth, OF18, OF19, OF20, OF21, OF22, OF23, OF24, F41, F50, F52 \\ \hline
+SR Benefit & 0.8515 & 27 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Vegetation\_Cover, Woody\_Canopy\_Cover, Moss\_Cover, Phragmites, Soil\_Type, Surface\_Water\_Present, Saturation\_Depth, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class, OF18, OF19, OF20, OF21, OF23, OF24, F24, F28, F41, F50, F52, F55, S4 \\ \hline
+SFST Benefit & 1.6496 & 9 & Provincial\_Class, Federal\_Class, Moss\_Cover, Surface\_Water\_Present, Hydrogeomorphic\_Class, OF18, OF22, OF25, OF28 \\ \hline
+
+\caption{Method with the Lowest RMSE and Number of Features}
+\label{fig_reg_specxtra:lowest_rmse_feat}
+\end{longtable}
+
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endhead
+
+WS & 0.7074 & 2 & F31, F43 \\ \hline
+NR & 2.2793 & 2 & OF18, F6 \\ \hline
+PR & 0.6000 & 2 & F43, F44 \\ \hline
+SR & 1.1035 & 2 & F28, F45 \\ \hline
+SFST & 0.5405 & 2 & F1, F43 \\ \hline
+WS Benefit & 1.3563 & 2 & OF17, OF18 \\ \hline
+NR Benefit & 2.2742 & 2 & OF10, OF22 \\ \hline
+PR Benefit & 1.4014 & 2 & Hydrogeomorphic\_Class, F41 \\ \hline
+SR Benefit & 2.0913 & 2 & OF18, F41 \\ \hline
+SFST Benefit & 1.9371 & 2 & Provincial\_Class, Moss\_Cover \\ \hline
+
+\caption{Models With Two Features}
+\label{fig_reg_specxtra:lowest_rmse_prop_feat}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Lowest RMSE} & \textbf{Lowest RMSE 2 Features} & \textbf{MSE} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Lowest RMSE} & \textbf{Lowest RMSE 2 Features} & \textbf{MSE} \\ \hline
+\endhead
+
+PR & 0.3238 & 0.6000 & 0.12 \\ \hline
+NR & 0.3627 & 2.2793 & 0.18 \\ \hline
+SR & 0.6086 & 1.1035 & 0.21 \\ \hline
+WS & 0.2578 & 0.7074 & 0.20 \\ \hline
+SFST & 0.4772 & 0.5405 & 0.18 \\ \hline
+PR Benefit & 0.7840 & 1.4014 & 0.63 \\ \hline
+NR Benefit & 0.3845 & 2.2742 & 0.10 \\ \hline
+SR Benefit & 0.8515 & 2.0913 & 0.52 \\ \hline
+WS Benefit & 0.8803 & 1.3563 & 1.08 \\ \hline
+SFST Benefit & 1.6496 & 1.9371 & 2.29 \\ \hline
+
+\caption{Combined Accuracy Table}
+\label{fig_reg_specxtra:all_rmse_feat}
+\end{longtable}

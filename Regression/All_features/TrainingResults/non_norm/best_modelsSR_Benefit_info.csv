@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_custom_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.001, 'adaboostregressor__loss': 'linear', 'adaboostregressor__n_estimators': 1}",1.5572195748775541
+output_ffill_imputed.csv,Ridge,"{'ridge__alpha': 0.1, 'ridge__solver': 'svd'}",1.374938223029526
+output_interpolated.csv,BayesianRidge,"{'bayesianridge__alpha_1': 1e-05, 'bayesianridge__alpha_2': 1e-07, 'bayesianridge__lambda_1': 1e-07, 'bayesianridge__lambda_2': 1e-05}",1.344551911689366
+output_iterative_imputed.csv,TheilSenRegressor,"{'theilsenregressor__max_subpopulation': 100, 'theilsenregressor__n_subsamples': None}",1.0133395074140874
+output_knn_imputed_custom.csv,TheilSenRegressor,"{'theilsenregressor__max_subpopulation': 1000, 'theilsenregressor__n_subsamples': None}",1.166078891960594
+output_mean_imputed.csv,TheilSenRegressor,"{'theilsenregressor__max_subpopulation': 1000, 'theilsenregressor__n_subsamples': None}",1.239875222625775
+output_mode_imputed.csv,SGDRegressor,"{'sgdregressor__learning_rate': 'constant', 'sgdregressor__loss': 'huber', 'sgdregressor__penalty': 'elasticnet', 'sgdregressor__warm_start': True}",1.092455903599378
+output_median_imputed.csv,Ridge,"{'ridge__alpha': 0.1, 'ridge__solver': 'sparse_cg'}",1.3973335072893986
+output_bfill_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 1.0, 'adaboostregressor__loss': 'square', 'adaboostregressor__n_estimators': 20}",0.4135719662115144

@@ -1,0 +1,67 @@
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{MSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{MSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endhead
+
+WS & 0.1624 & 15 & OF22, OF26, F3\_c, F3\_d, F3\_e, F3\_g, F20, F22, F28, F31, F43, F44, F45, F48, F49 \\ \hline
+NR & 0.3267 & 24 & OF16, OF18, OF25, OF26, F1, F3\_b, F3\_c, F3\_d, F3\_e, F3\_g, F17, F21, F22, F23, F24, F28, F31, F33, F34, F36, F43, F44, F45, F49 \\ \hline
+PR & 0.2943 & 15 & OF22, OF26, F21, F23, F24, F28, F29, F31, F33, F34, F35, F43, F44, F45, F63 \\ \hline
+SR & 0.2876 & 16 & OF22, OF26, F9, F17, F22, F28, F29, F31, F33, F34, F35, F36, F43, F44, F45, F49 \\ \hline
+SFST & 0.3808 & 12 & F1, F3\_e, F14, F21, F24, F25, F29, F31, F33, F34, F43, F47 \\ \hline
+WS Benefit & 0.6431 & 5 & OF17, OF18, OF23, OF24, F51 \\ \hline
+NR Benefit & 0.3692 & 13 & OF9, OF10, OF11, OF19, OF20, OF21, OF22, OF23, OF24, F41, F50, F51, F52 \\ \hline
+PR Benefit & 0.4724 & 11 & OF18, OF19, OF20, OF21, OF22, OF23, OF24, F41, F48, F50, F52 \\ \hline
+SR Benefit & 1.2175 & 13 & OF18, OF19, OF20, OF21, OF23, OF24, F24, F28, F41, F50, F52, F55, S4 \\ \hline
+SFST Benefit & 1.3430 & 6 & OF18, OF22, OF25, OF27, OF28, F50 \\ \hline
+
+\caption{Method with the Lowest RMSE and Number of Features}
+\label{fig_reg_spec:lowest_rmse_feat}
+\end{longtable}
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endhead
+
+WS & 0.6797 & 2 & F31, F43 \\ \hline
+NR & 2.0502 & 2 & OF18, F6 \\ \hline
+PR & 0.5445 & 2 & F43, F44 \\ \hline
+SR & 1.2642 & 2 & F43, F44 \\ \hline
+SFST & 0.5447 & 2 & F1, F43 \\ \hline
+WS Benefit & 1.2985 & 2 & OF17, OF18 \\ \hline
+NR Benefit & 2.2721 & 2 & OF10, OF22 \\ \hline
+PR Benefit & 1.2150 & 2 & OF19, F41 \\ \hline
+SR Benefit & 2.9551 & 2 & OF18, F41 \\ \hline
+SFST Benefit & 1.5528 & 2 & OF27, OF18 \\ \hline
+
+\caption{Models With Two Features}
+\label{fig_reg_spec:lowest_rmse_prop_feat}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Lowest RMSE} & \textbf{Lowest RMSE 2 Features} & \textbf{MSE} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Lowest RMSE} & \textbf{Lowest RMSE Proportionate} & \textbf{MSE} \\ \hline
+\endhead
+
+PR & 0.2943 & 0.5445 & 0.10 \\ \hline
+NR & 0.3267 & 2.0502 & 0.14 \\ \hline
+SR & 0.2876 & 1.2642 & 0.09 \\ \hline
+WS & 0.1624 & 0.6797 & 0.06 \\ \hline
+SFST & 0.3808 & 0.5447 & 0.17 \\ \hline
+PR Benefit & 0.4724 & 1.2150 & 0.21 \\ \hline
+NR Benefit & 0.3692 & 2.2721 & 0.07 \\ \hline
+SR Benefit & 1.2175 & 2.9551 & 0.10 \\ \hline
+WS Benefit & 0.6431 & 1.2985 & 0.36 \\ \hline
+SFST Benefit & 1.3430 & 1.5528 & 1.59 \\ \hline
+
+\caption{Combined Accuracy Table}
+\label{fig_reg_spec:all_rmse_feat}
+\end{longtable}

@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_interpolated.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'sag'}",2.108570688610871
+output_median_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'saga'}",2.107621308847733
+output_bfill_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'saga'}",2.103574729639693
+output_knn_imputed_custom.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'saga'}",2.1109510415299875
+output_mean_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'saga'}",2.105270389747053
+output_custom_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'sag'}",2.1036858903043836
+output_iterative_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'saga'}",2.0909280451036607
+output_ffill_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'svd'}",2.1043794398037403
+output_mode_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'svd'}",2.1043794398037403

@@ -1,0 +1,36 @@
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} \\ \hline
+
+WS & 0.2368 & 16  \\ \hline
+NR & 0.3654 & 48  \\ \hline
+PR &  0.3090 & 35 \\ \hline
+SR &  0.5587 & 22  \\ \hline
+SFST &  0.4011 & 34  \\ \hline
+WS Benefit & 0.9190 & 20  \\ \hline
+NR Benefit &  0.5007 & 16 \\ \hline
+PR Benefit &  0.9108 & 25  \\ \hline
+SR Benefit &  0.8942 & 28  \\ \hline
+SFST Benefit & 1.3525  & 20   \\ \hline
+\caption{Ensemble Learning using All Features}
+\label{fig_mse_specxtra:lowest_best_rmse_featred}
+\end{longtable}
+
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+
+WS & 0.8186 & 8 & F22,F31,F43,F44,F45, Organic Depth, Vegetation Type \\ \hline
+NR & 1.6623 & 9 & F3d, F43, F44, F45, F49, F6, OF18, OF27, Organic Depth \\ \hline
+PR &  0.7335 & 5 & F43, F44, F45, OF27, Organic Depth \\ \hline
+SR &  1.4279 & 7 & F28, F31, F43, F44, F45, OF27, Organic Depth\\ \hline
+SFST &  0.6794 & 8 & F1, F24, F31, F43, Federal Class, Living Moss, Organic Depth, Provincial Class\\ \hline
+WS Benefit & 1.0354 & 6 & F51,OF15,OF17,OF18,OF23,OF24 \\ \hline
+PR Benefit &  1.3435 & 7 & F41, Federal Class, Hydrogeomorphic, Living Moss, Moss Cover, OF19, Provincial Class\\ \hline
+NR Benefit &  1.0074 & 7 &  Living Moss, OF10, OF19, OF22, OF9, Organic Depth, Provincial Class\\ \hline
+SR Benefit &  2.5487 & 6 &  F41, Federal Class, OF18, OF22, OF24, Organic Depth \\ \hline
+WS Benefit &  1.6243 & 6 &  Hydrogeomorphic, OF17, OF18, OF23, OF24, OF8 \\ \hline
+SFST Benefit & 1.9797  & 7 & Federal Class, Hydrogeomorphic, Moss Cover, OF18, OF27 Organic Depth, Provincial Class\\ \hline
+\caption{Ensemble Learning using limited features}
+\label{fig_mse_specxtra:lowest_smallest_rmse_featred}
+\end{longtable}

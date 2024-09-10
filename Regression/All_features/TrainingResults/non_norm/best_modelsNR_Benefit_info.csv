@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_custom_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100, 100), 'mlpregressor__learning_rate': 'invscaling', 'mlpregressor__solver': 'lbfgs'}",0.7467232452517034
+output_ffill_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'invscaling', 'mlpregressor__solver': 'lbfgs'}",0.6238621514813275
+output_interpolated.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 1.0, 'adaboostregressor__loss': 'linear', 'adaboostregressor__n_estimators': 100}",0.7430240653433581
+output_iterative_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'adaptive', 'mlpregressor__solver': 'lbfgs'}",0.8448490041196761
+output_knn_imputed_custom.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.678001448592428
+output_mean_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.1, 'adaboostregressor__loss': 'square', 'adaboostregressor__n_estimators': 50}",0.9472001583326309
+output_mode_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.8235918365317422
+output_median_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 1.0, 'adaboostregressor__loss': 'linear', 'adaboostregressor__n_estimators': 50}",0.7834920915440627
+output_bfill_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100, 100), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.7674117439155093

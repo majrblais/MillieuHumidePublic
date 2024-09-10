@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_custom_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'invscaling', 'mlpregressor__solver': 'lbfgs'}",0.4080424390964182
+output_ffill_imputed.csv,RandomForestRegressor,"{'randomforestregressor__criterion': 'poisson', 'randomforestregressor__max_features': 'log2', 'randomforestregressor__min_samples_split': 2, 'randomforestregressor__n_estimators': 100}",0.45225390145465144
+output_interpolated.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'adaptive', 'mlpregressor__solver': 'lbfgs'}",0.4217156460822589
+output_iterative_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.3985333231363248
+output_knn_imputed_custom.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.4052432854111503
+output_mean_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (50, 50, 50), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.43033232242742214
+output_mode_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.31128222737118316
+output_median_imputed.csv,DecisionTreeRegressor,"{'decisiontreeregressor__criterion': 'absolute_error', 'decisiontreeregressor__max_features': 'sqrt', 'decisiontreeregressor__min_samples_split': 4, 'decisiontreeregressor__splitter': 'best'}",0.31664064429420236
+output_bfill_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'invscaling', 'mlpregressor__solver': 'lbfgs'}",0.3672368806025265

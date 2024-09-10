@@ -1,0 +1,61 @@
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}
+\contentsline {section}{\numberline {2}Proposed Approach}{8}{section.2}
+\contentsline {section}{\numberline {3}Data}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}Data Origin}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Data Modification}{12}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Datasets}{14}{subsection.3.3}
+\contentsline {section}{\numberline {4}Classification}{17}{section.4}
+\contentsline {subsection}{\numberline {4.1}All Features}{17}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Training Results}{17}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Feature Reduction}{19}{subsubsection.4.1.2}
+\contentsline {paragraph}{\numberline {4.1.2.1}Ensemble Learning}{22}{paragraph.4.1.2.1}
+\contentsline {subsection}{\numberline {4.2}Specific Features}{24}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Training Results}{24}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Feature Reduction}{25}{subsubsection.4.2.2}
+\contentsline {paragraph}{\numberline {4.2.2.1}Ensemble Learning}{27}{paragraph.4.2.2.1}
+\contentsline {subsection}{\numberline {4.3}Dataset Comparison}{29}{subsection.4.3}
+\contentsline {section}{\numberline {5}Regression}{30}{section.5}
+\contentsline {subsection}{\numberline {5.1}All Features}{31}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Training Results}{31}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Feature Reduction}{34}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}Specific Features}{39}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Training Results}{39}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Feature Reduction}{43}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Dataset Comparison}{47}{subsection.5.3}
+\contentsline {section}{\numberline {6}Detailed Analysis of \ac {EF}s using \ac {ML}}{49}{section.6}
+\contentsline {subsection}{\numberline {6.1}PR}{50}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}NR}{51}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}SR}{52}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}WS}{52}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}SFST}{53}{subsection.6.5}
+\contentsline {section}{\numberline {7}CausalML}{54}{section.7}
+\contentsline {subsection}{\numberline {7.1}Results}{55}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Discussion}{57}{subsection.7.2}
+\contentsline {section}{\numberline {8}Tetrad}{57}{section.8}
+\contentsline {section}{\numberline {9}Future Directions}{58}{section.9}
+\contentsline {subsection}{\numberline {9.1}Data}{58}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Machine Learning}{58}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Causal Inference}{59}{subsection.9.3}
+\contentsline {section}{\numberline {10}Conclusion}{60}{section.10}
+\contentsline {subsection}{\numberline {10.1}Classification Analysis}{60}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Regression Analysis}{60}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Phosphorus Retention (\ac {PR})}{61}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Nitrate Removal \& Retention (\ac {NR})}{61}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.5}Sediment Retention \& Stabilization (\ac {SR})}{62}{subsection.10.5}
+\contentsline {subsection}{\numberline {10.6}Water Storage \& Delay (\ac {WS})}{62}{subsection.10.6}
+\contentsline {subsection}{\numberline {10.7}Stream Flow Support (\ac {SFST})}{62}{subsection.10.7}
+\contentsline {subsection}{\numberline {10.8}Causal Inference with CausalML}{63}{subsection.10.8}
+\contentsline {subsection}{\numberline {10.9}Challenges with Tetrad}{63}{subsection.10.9}
+\contentsline {subsection}{\numberline {10.10}Overall Conclusion}{63}{subsection.10.10}
+\contentsline {section}{\numberline {11}References}{64}{section.11}
+\contentsline {section}{\numberline {12}Annexes}{66}{section.12}
+\contentsline {subsection}{\numberline {12.1}Datasets}{66}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Features}{66}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Machine Learning Algorithms}{68}{subsection.12.3}
+\contentsline {subsection}{\numberline {12.4}Classification}{71}{subsection.12.4}
+\contentsline {subsubsection}{\numberline {12.4.1}All Features}{71}{subsubsection.12.4.1}
+\contentsline {subsubsection}{\numberline {12.4.2}Specific Features}{73}{subsubsection.12.4.2}
+\contentsline {subsection}{\numberline {12.5}Regression Models}{74}{subsection.12.5}
+\contentsline {subsubsection}{\numberline {12.5.1}All Features}{74}{subsubsection.12.5.1}
+\contentsline {subsubsection}{\numberline {12.5.2}Specific Features}{81}{subsubsection.12.5.2}
+\contentsline {subsection}{\numberline {12.6}CausalML}{87}{subsection.12.6}

@@ -1,0 +1,46 @@
+\begin{longtable}{|p{2cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endhead
+
+PR & 0.8571 & 9 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Vegetation\_Cover, Woody\_Canopy\_Cover, Moss\_Cover, Soil\_Type, Surface\_Water\_Present, Saturation\_Depth, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class \\ \hline
+NR & 0.6667 & 9 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Vegetation\_Cover, Woody\_Canopy\_Cover, Moss\_Cover, Soil\_Type, Surface\_Water\_Present, Saturation\_Depth, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class \\ \hline
+SR & 0.6190 & 11 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Vegetation\_Cover, Moss\_Cover, Phragmites, Soil\_Type, Surface\_Water\_Present, Living\_Moss\_Depth, Organic\_Depth \\ \hline
+WS & 0.8095 & 5 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Hydrogeomorphic\_Class \\ \hline
+SFST & 0.7143 & 2 & Provincial\_Class, Federal\_Class \\ \hline
+PR Benefit & 0.7619 & 6 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Vegetation\_Cover, Woody\_Canopy\_Cover, Moss\_Cover, Soil\_Type, Surface\_Water\_Present, Saturation\_Depth, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class \\ \hline
+NR Benefit & 0.6667 & 5 & Provincial\_Class, Federal\_Class, Regime, Moss\_Cover, Living\_Moss\_Depth \\ \hline
+SR Benefit & 0.8095 & 6 & Provincial\_Class, Federal\_Class, Regime, Vegetation\_Type, Vegetation\_Cover, Woody\_Canopy\_Cover, Moss\_Cover, Soil\_Type, Surface\_Water\_Present, Saturation\_Depth, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class \\ \hline
+WS Benefit & 0.7619 & 9 & Provincial\_Class, Federal\_Class, Regime, Woody\_Canopy\_Cover, Phragmites, Surface\_Water\_Present, Living\_Moss\_Depth, Organic\_Depth, Hydrogeomorphic\_Class \\ \hline
+SFST Benefit & 0.6667 & 5 & Provincial\_Class, Federal\_Class, Moss\_Cover, Surface\_Water\_Present, Hydrogeomorphic\_Class \\ \hline
+
+\caption{Maximum Accuracy}
+\label{tab_class_xtra:ensemble_class_acc}
+\end{longtable}
+
+
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+\endhead
+
+PR & 0.7619 & 2 & Provincial\_Class, Moss\_Cover \\ \hline
+NR & 0.5714 & 2 & Provincial\_Class, Federal\_Class \\ \hline
+SR & 0.4286 & 2 & Provincial\_Class, Hydrogeomorphic\_Class \\ \hline
+WS & 0.5238 & 2 & Provincial\_Class, Federal\_Class \\ \hline
+SFST & 0.7143 & 2 & Provincial\_Class, Federal\_Class \\ \hline
+PR Benefit & 0.7143 & 2 & Provincial\_Class, Federal\_Class \\ \hline
+NR Benefit & 0.5714 & 2 & Provincial\_Class, Federal\_Class \\ \hline
+SR Benefit & 0.7143 & 2 & Provincial\_Class, Moss\_Cover \\ \hline
+WS Benefit & 0.6190 & 2 & Moss\_Cover, Living\_Moss\_Depth \\ \hline
+SFST Benefit & 0.5714 & 2 & Provincial\_Class, Federal\_Class \\ \hline
+
+\caption{Maximum Proportionate Accuracy}
+\label{tab_class_xtra:ensemble_prop_class_acc}
+\end{longtable}

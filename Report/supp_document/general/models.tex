@@ -1,0 +1,144 @@
+\begin{longtable}{|>{\raggedright}p{2cm}|>{\raggedright}p{3cm}|>{\raggedright\arraybackslash}p{8cm}|}
+\hline
+\textbf{Algorithm} & \textbf{Type} & \textbf{Parameters} \\
+\hline
+Ridge & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{alpha}: [0.1, 0.5, 1.0]
+    \item \texttt{solver}: ['auto', 'svd', 'cholesky', 'lsqr', 'sparse\_cg', 'sag', 'saga', 'lbfgs']
+\end{itemize} \\
+\hline
+Decision Tree & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{criterion}: ['gini', 'entropy', 'log\_loss'] (Class.), ['squared\_error', 'friedman\_mse', 'absolute\_error', 'poisson'] (Reg.)
+    \item \texttt{splitter}: ['best', 'random']
+    \item \texttt{min\_samples\_split}: [2, 3, 4, 5]
+    \item \texttt{max\_features}: [None, 'sqrt', 'log2']
+\end{itemize} \\
+\hline
+Random Forest & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{n\_estimators}: [50, 100, 200]
+    \item \texttt{criterion}: ['gini', 'entropy', 'log\_loss'] (Class.), ['squared\_error', 'friedman\_mse', 'absolute\_error', 'poisson'] (Reg.)
+    \item \texttt{min\_samples\_split}: [2, 5]
+    \item \texttt{max\_features}: ['sqrt', 'log2']
+\end{itemize} \\
+\hline
+Gradient Boosting & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{loss}: ['log\_loss', 'deviance', 'exponential'] (Class.), ['squared\_error', 'absolute\_error', 'huber', 'quantile'] (Reg.)
+    \item \texttt{learning\_rate}: [0.001, 0.01, 0.1]
+    \item \texttt{n\_estimators}: [50, 100, 200]
+    \item \texttt{warm\_start}: [True, False]
+\end{itemize} \\
+\hline
+AdaBoost & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{n\_estimators}: [50, 100, 200]
+    \item \texttt{learning\_rate}: [0.001, 0.01, 0.1, 1.0]
+    \item \texttt{algorithm}: ['SAMME', 'SAMME.R'] (Class.), \texttt{loss}: ['linear', 'square', 'exponential'] (Reg.)
+\end{itemize} \\
+\hline
+K-Neighbors & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{n\_neighbors}: [5, 10, 15, 20]
+    \item \texttt{weights}: ['uniform', 'distance']
+    \item \texttt{algorithm}: ['auto', 'ball\_tree', 'kd\_tree', 'brute']
+    \item \texttt{leaf\_size}: [30, 50, 70]
+    \item \texttt{metric}: ['euclidean', 'manhattan', 'minkowski']
+\end{itemize} \\
+\hline
+MLP (Neural Network) & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{hidden\_layer\_sizes}: [(50, 50, 50), (100, 100, 100), (100, 100, 100, 100)]
+    \item \texttt{activation}: ['identity', 'logistic', 'tanh', 'relu']
+    \item \texttt{solver}: ['lbfgs', 'sgd', 'adam']
+    \item \texttt{learning\_rate}: ['constant', 'invscaling', 'adaptive']
+\end{itemize} \\
+\hline
+Logistic Regression & Classifier & 
+\begin{itemize}
+    \item \texttt{penalty}: ['l1', 'l2', 'elasticnet', 'none']
+    \item \texttt{C}: [0.1, 0.5, 1.0, 5.0, 10.0]
+    \item \texttt{solver}: ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
+    \item \texttt{max\_iter}: [100, 200, 300]
+\end{itemize} \\
+\hline
+SGD & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{loss}: ['hinge', 'log', 'modified\_huber', 'squared\_hinge', 'perceptron'] (Class.), ['squared\_error', 'huber', 'epsilon\_insensitive', 'squared\_epsilon\_insensitive'] (Reg.)
+    \item \texttt{penalty}: ['l2', 'l1', 'elasticnet']
+    \item \texttt{learning\_rate}: ['constant', 'optimal', 'invscaling', 'adaptive']
+    \item \texttt{warm\_start}: [True, False]
+\end{itemize} \\
+\hline
+Support Vector Machines (SVM) & Class./Reg. & 
+\begin{itemize}
+    \item \texttt{C}: [0.1, 1.0, 10.0]
+    \item \texttt{kernel}: ['linear', 'poly', 'rbf', 'sigmoid']
+    \item \texttt{degree}: [1, 3, 5]
+    \item \texttt{gamma}: ['scale', 'auto']
+\end{itemize} \\
+\hline
+Gaussian Naive Bayes & Classifier & 
+\begin{itemize}
+    \item \texttt{var\_smoothing}: [1e-9, 1e-8, 1e-7]
+\end{itemize} \\
+\hline
+Linear Discriminant Analysis & Classifier & 
+\begin{itemize}
+    \item \texttt{solver}: ['svd', 'lsqr', 'eigen']
+    \item \texttt{shrinkage}: [None, 'auto', 0.1, 0.5, 1.0]
+\end{itemize} \\
+\hline
+ElasticNet & Regressor & 
+\begin{itemize}
+    \item \texttt{l1\_ratio}: [0.25, 0.5, 0.75]
+    \item \texttt{fit\_intercept}: [True, False]
+    \item \texttt{precompute}: [True, False]
+    \item \texttt{copy\_X}: [True, False]
+    \item \texttt{warm\_start}: [True, False]
+    \item \texttt{positive}: [True, False]
+    \item \texttt{selection}: ['cyclic', 'random']
+\end{itemize} \\
+\hline
+Bayesian Ridge & Regressor & 
+\begin{itemize}
+    \item \texttt{alpha\_1}: [1e-7, 1e-6, 1e-5]
+    \item \texttt{alpha\_2}: [1e-7, 1e-6, 1e-5]
+    \item \texttt{lambda\_1}: [1e-7, 1e-6, 1e-5]
+    \item \texttt{lambda\_2}: [1e-7, 1e-6, 1e-5]
+\end{itemize} \\
+\hline
+Kernel Ridge & Regressor & 
+\begin{itemize}
+    \item \texttt{alpha}: [0.00001, 0.0001, 0.001, 0.01]
+    \item \texttt{kernel}: ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed']
+    \item \texttt{degree}: [1, 2, 3, 5, 10]
+    \item \texttt{coef0}: [0.0, 0.5, 1.0]
+\end{itemize} \\
+\hline
+Linear Regression & Regressor & 
+\begin{itemize}
+    \item \texttt{fit\_intercept}: [True, False]
+    \item \texttt{copy\_X}: [True, False]
+    \item \texttt{positive}: [True, False]
+\end{itemize} \\
+\hline
+RANSAC Regressor & Regressor & 
+\begin{itemize}
+    \item \texttt{min\_samples}: [None, 1, 2, 5, 10]
+    \item \texttt{max\_trials}: [1, 10, 50, 100, 150]
+    \item \texttt{loss}: ['absolute\_error', 'squared\_error']
+\end{itemize} \\
+\hline
+Theil-Sen Regressor & Regressor & 
+\begin{itemize}
+    \item \texttt{max\_subpopulation}: [1, 10, 100, 500]
+    \item \texttt{n\_subsamples}: [None, 1, 5, 10, 25]
+\end{itemize} \\
+\hline
+
+\caption{Machine Learning Algorithms}
+\label{tab:all_algorithms}
+\end{longtable}

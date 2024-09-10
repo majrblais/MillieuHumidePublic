@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,accuracy
+output_mode_imputed.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 0.1, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523
+output_custom_imputed.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 1.0, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523
+output_knn_imputed_custom.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 0.1, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523
+output_mean_imputed.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 0.1, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523
+output_ffill_imputed.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 0.1, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523
+output_iterative_imputed.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 0.1, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523
+output_interpolated.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 0.1, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523
+output_bfill_imputed.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 0.1, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523
+output_median_imputed.csv,RidgeClassifier,"{'ridgeclassifier__alpha': 0.1, 'ridgeclassifier__class_weight': None, 'ridgeclassifier__solver': 'auto'}",0.9523809523809523

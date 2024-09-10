@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_custom_imputed.csv,DecisionTreeRegressor,"{'decisiontreeregressor__criterion': 'absolute_error', 'decisiontreeregressor__max_features': 2, 'decisiontreeregressor__min_samples_split': 2, 'decisiontreeregressor__splitter': 'best'}",0.45909906597699834
+output_ffill_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.01, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 1}",0.38483537406361734
+output_interpolated.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.01, 'adaboostregressor__loss': 'linear', 'adaboostregressor__n_estimators': 1}",0.4140808499193992
+output_iterative_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 1.0, 'adaboostregressor__loss': 'linear', 'adaboostregressor__n_estimators': 50}",0.396777044198793
+output_knn_imputed_custom.csv,RandomForestRegressor,"{'randomforestregressor__criterion': 'absolute_error', 'randomforestregressor__max_features': 'log2', 'randomforestregressor__min_samples_split': 2, 'randomforestregressor__n_estimators': 1}",0.4377849548199054
+output_mean_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 10, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 1}",0.46817136594677156
+output_mode_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.01, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 1}",0.41430629422017756
+output_median_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.01, 'adaboostregressor__loss': 'exponential', 'adaboostregressor__n_estimators': 1}",0.47312204013333886
+output_bfill_imputed.csv,AdaBoostRegressor,"{'adaboostregressor__learning_rate': 0.01, 'adaboostregressor__loss': 'linear', 'adaboostregressor__n_estimators': 1}",0.42011271531481287

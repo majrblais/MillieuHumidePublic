@@ -1,0 +1,1328 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{svg}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{array}
+\usepackage{xr}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{csvsimple}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\usepackage{soul}
+\usepackage{multicol}
+\usepackage{acronym}  % Add this line
+\usepackage[acronym,toc]{glossaries}  % Add this line
+\usepackage{multirow}
+\setcounter{secnumdepth}{4}
+\maxdeadcycles=1000
+\renewcommand{\topfraction}{.85}
+\renewcommand{\textfraction}{.1}
+\renewcommand{\floatpagefraction}{.85}
+% Create glossaries
+\makeglossaries
+
+% Glossary entries
+
+\newglossaryentry{wetland}{
+  name=wetland,
+  description={land consisting of marshes or swamps; saturated land}
+}
+
+\newglossaryentry{marsh}{
+  name=marsh,
+  description={a wetland that is dominated by herbaceous rather than woody plant species}
+}
+
+\newglossaryentry{bog}{
+  name=bog,
+  description={a wetland that accumulates peat, a deposit of dead plant material—often mosses, and in a majority of cases, sphagnum moss}
+}
+
+\newglossaryentry{fen}{
+  name=fen,
+  description={a type of peat-accumulating wetland that receives some drainage from surrounding mineral soils and usually supports marsh-like vegetation}
+}
+
+\newglossaryentry{swamp}{
+  name=swamp,
+  description={a wetland that is forested, often with standing or slow-moving water}
+}
+
+
+
+
+
+% Remove paragraphs automatic indentation
+\setlength{\parindent}{0pt}
+
+% Add an empty line after a paragraph
+\usepackage{parskip}
+
+\title{\textbf{UMoncton CCNB-Innov Project} 
+\textit{Technical Report}}
+\author{M-A. Blais, M. Akhloufi \\
+Perception, Robotics and Intelligent Machines (PRIME), \\
+Université de Moncton, \\
+18 Antonine Maillet Ave. \\
+Moncton, NB E1A 3E9}
+\date{TBD 2024}
+
+\externaldocument{./class_all_section/class_accuracies}
+\externaldocument{./class_all_section/class_ensemble_figures}
+\externaldocument{./class_all_section/class_reduction_figures}
+\externaldocument{./class_all_section/class_reduction_ensemble_figures}
+\externaldocument{./class_all_section/class_features_acc}
+
+
+\externaldocument{./reg_section_all/dimred_results}
+\externaldocument{./general/features}
+\externaldocument{./general/res_analysis}
+
+
+\externaldocument{./reg_section_all/reg_mse}
+\externaldocument{./reg_section_all/reg_training_figures}
+\externaldocument{./reg_section_all/reg_ensemble}
+\externaldocument{./reg_section_all/reg_featred_mse}
+\externaldocument{./reg_section_all/class_grouping}
+
+\externaldocument{./reg_section_all/reg_featred_graphs}
+\externaldocument{./reg_section_all/reg_featred_ensemble_graphs}
+\externaldocument{./reg_section_all/reg_featred_ensemble_tables}
+
+\externaldocument{./reg_section_all/regression_models}
+\externaldocument{./reg_section_specific/training_mse}
+\externaldocument{./reg_section_specific/reg_training_figures}
+\externaldocument{./reg_section_specific/reg_featred_mse}
+\externaldocument{./reg_section_specific/reg_featred_ensemble_graphs}
+\externaldocument{./reg_section_specific/reg_featred_ensemble_tables}
+\externaldocument{./reg_section_specific/class_grouping}
+
+\externaldocument{./reg_section_xtra/training_mse}
+
+
+\externaldocument{./reg_section_specxtra/training_mse}
+\externaldocument{./reg_section_specxtra/reg_training_figures}
+\externaldocument{./reg_section_specxtra/reg_featred_mse}
+\externaldocument{./reg_section_specxtra/reg_featred_ensemble_graphs}
+\externaldocument{./reg_section_specxtra/reg_featred_ensemble_tables}
+\externaldocument{./reg_section_specxtra/class_grouping}
+
+
+
+\externaldocument{./causalml_section/tables}
+\externaldocument{./causalml_section/graphs}
+
+\externaldocument{./class_specific_section/training_accuracy}
+\externaldocument{./class_specific_section/class_ensemble_figures}
+\externaldocument{./class_xtra_section/class_feature_acc}
+
+\externaldocument{./class_specificxtra_section/class_ensemble_figures}
+\externaldocument{./class_specificxtra_section/class_feature_acc}
+
+
+\externaldocument{./analysis/res1}
+\externaldocument{./analysis/res2}
+
+\externaldocument{./analysis/res1_reg}
+\externaldocument{./analysis/res2_reg}
+
+
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+
+
+\clearpage 
+\thispagestyle{plain}
+\tableofcontents % This will create the Table of Contents
+
+\section*{Abstract}
+
+\clearpage
+\printglossaries
+
+\clearpage
+\section*{List of Acronyms}
+\begin{acronym}
+\acro{ML}[ML]{Machine Learning}
+\acro{WESP-AC}[WESP-AC]{Wetland Ecosystem Services Protocol for Atlantic Canada}
+\acro{PCA}[PCA]{Principal Component Analysis}
+\acro{CNN}[CNN]{Convolutional Neural Network}
+\acro{CI}[CI]{Causal Inference}
+\acro{EF}[EF]{\ac{EF}}
+\acro{NB}[NB]{New-Brunswick}
+\acro{NRNB}[NRNB]{Natural ressources NB}
+\acro{WS}[WS]{Water Storage \& Delay}
+\acro{PR}[PR]{Phosphorus Retention}
+\acro{SR}[SR]{Sediment Retention \& Stabilization}
+\acro{NR}[NR]{Nitratre Remove \& Retention}
+\acro{SFST}[SFST]{Stream Flow Support}
+\acro{VT}[VT]{Variance Threshold}
+
+
+% Add more acronyms here
+\end{acronym}
+
+
+
+\section{Introduction}
+This document should be served as supplementary file for the report.
+It contains various results not included in the main document.
+
+
+\section{Classification}\label{sec:class}
+First, in section \ref{sec:class_all}, we train our algorithms using our D1 dataset.
+Section \ref{sec:class_spec}, \ref{sec:class_xtra} and \ref{sec:class_allxtra} use the respective D2, D3 and D4 datasets.
+
+
+\subsection{All Features (D1)}\label{sec:class_all}
+This section trains our algorithms using all features provided by the WESP-AC 3.4, with the exception of the unnecessary features.
+We compare our results using multiple data filling methods, however we only present the best performing methods.
+First, we present the training results and the ensemble learning approach using all features in section \ref{sec:class_all_results}.
+Our ensemble learning algorithm consists of combining the top five best performing algorithms and average out the predictions.
+Section \ref{sec:class_all_featred} presents a feature reduction approach using the results from section \ref{sec:class_all_results}.
+
+\subsubsection{Training Results}\label{sec:class_all_results}
+Table \ref{tab_class_all:model_accuracies_best} provides an overview of some of the best performing algorithms with specific filling methods.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Model} & \textbf{Data} & \textbf{Accuracy} \\
+\hline
+\multirow{2}{*}{PR} & GradientBoosting & BFill, FFill, Interpolated, Mean, Mode & 95.0\% \\
+ & RandomForest & BFill, FFill, Interpolated, Mean, Median & 95.0\% \\
+\hline
+NR    & LogisticReg. & BFill, Custom, FFill, Interpolated, KNN, Mean & 81.0\% \\
+\hline
+SR    & GradientBoosting & Iterative, Median, Mode & 90.0\% \\
+\hline
+WS    & GradientBoosting & BFill, Interpolated, Mode, KNN, Mean, Median & 95.0\% \\
+\hline
+SFST  & DecisionTree & Iterative, Mode & 100.0\% \\
+\hline
+\multirow{2}{*}{PR Ben.} & LinearDiscriminant & BFill, Custom, Iterative & 95.0\% \\
+ & GradientBoosting & BFill, FFill, Interpolated, Mean, Mode & 95.0\% \\
+\hline
+NR Ben. & GradientBoosting & BFill, Custom, FFill & 95.0\% \\
+\hline
+SR Ben.& Ridge& All Data & 100.0\% \\
+\hline
+WS Ben. & GradientBoosting & BFill, Interpolated, Mode & 95.0\% \\
+\hline
+\multirow{2}{*}{SFST Ben.} & DecisionTree & Mode & 95.0\% \\
+ & GradientBoosting & BFill & 81.0\% \\
+\hline
+\end{tabular}
+\caption{Best Model Accuracies}
+\label{tab_class_all:model_accuracies_best}
+\end{table}
+
+In this table, each \ac{EF} is shown with the accuracy of the best performing model and data filling method.
+
+
+To increase the validity of using \ac{ML} for this task, we propose ensemble learning.
+The results from ensemble learning are shown in section \ref{sec:class_ensemble}.
+We also propose feature selection which consists of using a limited amount of features to achieved similar.
+Feature selection would enable us to use less features (E.g 10) to achieve similar results.
+Feature selection is presented in section \ref{sec:class_all_featred}.
+
+
+\paragraph{Ensemble Learning}\label{sec:class_all_ensemble}
+To increase the performance of our algorithms, we propose using ensemble learning to combine multiple models.
+Overall, the ensemble learning did not increase the performance of our algorithms, as shown in table \ref{tab_class_all:class_ensemble}.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{Ensemble Accuracy} \\
+\hline
+PR      & 95.24\% & 95.24\% \\
+\hline
+NR      & 80.59\% & 80.59\%\\
+\hline
+SR      & 90.48\% & 85.71\%\\
+\hline
+WS      & 95.24\% & 95.24\%\\
+\hline
+SFST    & 100.0\% & 95.24\%\\
+\hline
+PR Ben. & 95.24\% & 90.48\%\\
+\hline
+NR Ben. & 95.24\% & 95.24\%\\
+\hline
+SR Ben. & 100.0\% & 100.0\%\\
+\hline
+WS Ben. & 95.24\% & 95.24\%\\
+\hline
+SFST Ben. & 95.24\% & 95.24\%\\
+\hline
+\end{tabular}
+\caption{Ensemble Model Accuracies}
+\label{tab_class_all:class_ensemble}
+\end{table}
+
+Figures \ref{fig:ensemble_pr}, \ref{fig:ensemble_nr}, \ref{fig:ensemble_sr}, \ref{fig:ensemble_ws}, \ref{fig:ensemble_sfst}, \ref{fig:ensemble_pr_benefit}, \ref{fig:ensemble_nr_benefit}, \ref{fig:ensemble_sr_benefit}, \ref{fig:ensemble_ws_benefit} and \ref{fig:ensemble_sfst_benefit} show the confusion matrices for each EFs using ensemble learning.
+
+
+
+\subsubsection{Feature Selection}\label{sec:class_all_featred}
+Feature selection consists of using techniques to reduce the number of features required to train the algorithms while achieving similar results.
+In this section we explore the three feature reduction techniques, presented in section \ref{sec:PA}.
+
+Using the accuracy as metric, we compare the algorithms for each ecosystem function trained with reduced features.
+The best performing algorithm for each function was selected based on accuracy from table \ref{tab_class_all:class_ensemble}.
+Each algorithm was trained with the three reduction techniques with features ranging from all features to only tow features.
+Figures \ref{fig:nr_class} to \ref{fig:sfst_ben_class} show the results for each \ac{EF} with the three reduction techniques.
+
+Interesting behavior can be observed when analyzing the results from these figures.
+Tables \ref{tab_class_all:ensemble_class_acc} and \ref{tab_class_all:ensemble_prop_class_acc} respectively show the best overall accuracies and the best using two features.
+The overall accuracy consists of the method that achieved the best accuracy regardless of the number of features.
+The best two features takes the best accuracy from the three method which only used two feature to predict the class.
+
+
+
+
+
+\paragraph{Ensemble Learning}
+To increase the performance of our feature reduction approach, we propose using ensemble learning.
+This is proposed to average out errors to increase the performance without retraining or the need for complex algorithms.
+Our ensemble model, for each \ac{EF}, is based on the top five models achieved from the feature reduction with no more than 10 features per model.
+Table \ref{tab_class_all:ensemble_reduction_class} show the performance for each function before and after the ensemble learning.
+
+% Table for proportionate accuracy
+\begin{longtable}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{6cm}|}
+\hline
+\textbf{Function} & \textbf{Best Acc.} & \textbf{2nd Best Acc.} & \textbf{Ensemble Learning Acc.} & \textbf{Features Used} \\ \hline
+PR & 95.24\% & 95.24\% & 95.24\% & F1, F14, F21, F23, F24, F28, F29, F30, F41, F43, F44, F45, F46 \\ \hline
+NR & 76.19\% & 76.19\% & 76.19\% & F43, F44, F45, F46 \\ \hline
+SR & 90.48\% & 80.95\% & 85.71\% & F1, F14, F24, F25, F28, F29, F30, F31, F3e, F43, F44, F45, F46, OF22 \\ \hline
+WS & 90.48\% & 90.48\% & 90.48\% & F1, F29, F31, F43, F44, F45, F46, F65 \\ \hline
+SFST & 95.24\% & 95.24\% & 95.24\% & F43, F44, F45, F46 \\ \hline
+PR Benefit & 85.71\% & 85.71\% & 85.71\% & F14, F41, F43, F44, F46, F47, F55 \\ \hline
+NR Benefit & 90.48\% & 90.48\% & 90.48\% & F1, F14, F31, F3d, F41, F43, F46, OF10, OF19, OF9 \\ \hline
+SR Benefit & 100.00\% & 100.00\% & 100.00\% & F1, F14, F23, F25, F28, F29, F3e, F41, F43, F44, F45, F46, OF19, OF21 \\ \hline
+WS Benefit & 95.24\% & 95.24\% & 95.24\% & F3c, F3e, F49, F50, F51, F52, F54, OF17, OF23, OF38, OF5, OF7, OF9 \\ \hline
+SFST Benefit & 90.48\% & 85.71\% & 90.48\% & F1, F14, F23, F30, F3e, F43, F44, F45, F46 \\ \hline
+\caption{Ensemble Learning Accuracy}
+\label{tab_class_all:ensemble_reduction_class}
+\end{longtable}
+In this table, the first column represents the \ac{EF}, while the second and third represent the best and second best accuracy from section \ref{sec:class_all_featred} with a maximum of 10 features.
+The fourth column represent the accuracy of the ensemble learning model while the last column consists of the features of all five models used for ensemble learning.
+
+
+\subsection{Specific Features (D2)}\label{sec:class_spec}
+In this section we train the same algorithms as the previous section.
+However, the algorithms are trained only and their respective specific features using the D2 dataset.
+Our goal for this section is to reduce possible noise that can be caused by using all features.
+Similarly to the previous section, we compare using all features versus using feature reduction techniques and ensemble learning.
+
+
+\subsubsection{Training Results}
+In terms of training results, we present an overview of the best performing algorithms and filling method.
+Our training results are more exploratory and are used to pinpoint specific algorithms and data filling methods for each \ac{EF}.
+Table \ref{tab_class:spec_model_accuracies_best} provides an overview of some of the best performing algorithms and data.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Model} & \textbf{Data} & \textbf{Accuracy} \\
+\hline
+
+PR & RidgeClassifier & All Data & 95.2\% \\
+\hline
+NR & RidgeClassifier & All Data & 85.7\% \\
+\hline
+SR & SGDClassifier & BFill, Mean & 95.2\% \\
+\hline
+WS & GradientBoostingClassifier & All Data & 100.0\% \\
+\hline
+SFST & DecisionTreeClassifier & All Data & 95.2\% \\
+\hline
+PR Ben. & DecisionTreeClassifier & BFill & 100.0\% \\
+\hline
+NR Ben. & SVC & All Data & 100.0\% \\
+\hline
+SR Ben. & RidgeClassifier & All Data & 100.0\% \\
+\hline
+WS Ben. & RandomForestClassifier & Custom, FFill, Interpolated, Iterative & 95.24\% \\
+\hline
+SFST Ben. & MLPClassifier & Interpolated & 71.43\% \\
+\hline
+
+\end{tabular}
+\caption{Best Model Accuracies}
+\label{tab_class:spec_model_accuracies_best}
+\end{table}
+
+In this table, we present which model and data filling method achieved the best accuracy for each \ac{EF}.
+
+
+
+\subsubsection{Ensemble Learning}
+We also combine the best performing algorithms using ensemble learning.
+Overall, the ensemble learning did not increase the performance of our algorithms, as shown in table \ref{tab_spec:class_ensemble}.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{Ensemble Accuracy} \\
+\hline
+PR      & 95.24\% & 95.24\% \\
+\hline
+NR      & 85.71\% & 85.71\%\\
+\hline
+SR      & 95.24\% & 95.24\%\\
+\hline
+WS      & 100.0\% & 100.0\%\\
+\hline
+SFST    & 95.24\% & 95.24\%\\
+\hline
+PR Ben. & 100.0\% & 100.0\%\\
+\hline
+NR Ben. & 100.0\% & 100.0\%\\
+\hline
+SR Ben. & 100.0\% & 100.0\%\\
+\hline
+WS Ben. & 95.24\% & 95.24\%\\
+\hline
+SFST Ben. & 71.43\% & 71.43\%\\
+\hline
+\end{tabular}
+\caption{Ensemble Model Accuracies}
+\label{tab_spec:class_ensemble}
+\end{table}
+
+Figures \ref{fig_class:spec_ensemble_pr}, \ref{fig_class:spec_ensemble_nr}, \ref{fig_class:spec_ensemble_sr}, \ref{fig_class:spec_ensemble_ws}, \ref{fig_class:spec_ensemble_sfst}, \ref{fig_class:spec_ensemble_pr_benefit}, \ref{fig_class:spec_ensemble_nr_benefit}, \ref{fig_class:spec_ensemble_sr_benefit}, \ref{fig_class:spec_ensemble_ws_benefit} and \ref{fig_class:spec_ensemble_sfst_benefit} show the confusion matrices for each EFs using ensemble learning.
+
+\subsubsection{Feature Selection}
+We also use the three feature reduction techniques to reduce the features used while trying to achieve similar results.
+We compare both the overall accuracy and the best accuracy using only two features.
+Tables \ref{tab_class_spec:ensemble_class_acc} and \ref{tab_class_spec:ensemble_prop_class_acc} respectively show the best overall accuracies and the best using two features.
+
+\paragraph{Ensemble Learning}
+Table \ref{tab_class_spec:ensemble_reduction} show the performance for each \ac{EF} before and after ensemble learning.
+
+% Table for proportionate accuracy
+\begin{longtable}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{6cm}|}
+\hline
+\textbf{Function} & \textbf{Best Acc.} & \textbf{2nd Best Acc.} & \textbf{Ensemble Learning Acc.} & \textbf{Features Used} \\ \hline
+PR & 90.48\% & 90.48\% & 90.48\% & F17, F20, F21, F23, F24, F28, F29, F31, F33, F34, F35, F36, F43, F44, F45, F49, OF22, OF26, OF27 \\ \hline
+NR & 76.19\% & 76.19\% & 76.19\% & F1, F24, F28, F31, F3c, F43, F44, F45 \\ \hline
+SR & 80.95\% & 80.95\% & 80.95\% & F17, F28, F29, F31, F33, F34, F35, F36, F43, F44, F45, F49, F9, OF22 \\ \hline
+WS & 100.00\% & 100.00\% & 95.24\% & F20, F28, F31, F3c, F3d, F3e, F43, F44, F45, F49, OF22, OF26 \\ \hline
+SFST & 95.24\% & 95.24\% & 95.24\% & F1, F14, F24, F31, F43 \\ \hline
+PR Benefit & 95.24\% & 95.24\% & 90.48\% & F41, F48, F50, F52, OF19, OF20, OF21, OF22, OF23, OF24 \\ \hline
+NR Benefit & 90.48\% & 90.48\% & 85.71\% & F13, F41, F50, F51, F52, OF10, OF19, OF20, OF21, OF22, OF24, OF9 \\ \hline
+SR Benefit & 100.00\% & 100.00\% & 100.00\% & F24, F28, F41, OF19, OF20, OF21, OF24 \\ \hline
+WS Benefit & 95.24\% & 95.24\% & 95.24\% & F51, OF17, OF18, OF23, OF24, OF8 \\ \hline
+SFST Benefit & 57.14\% & 57.14\% & 57.14\% & F50, OF18, OF22, OF25, OF28 \\ \hline
+\caption{Ensemble Learning Accuracy}
+\label{tab_class_spec:ensemble_reduction}
+\end{longtable}
+
+
+\subsection{Extra(D3)}\label{sec:class_xtra}
+This section is used to train our various classification algorithms on D3, which consists of extra features collected outside the WESP-AC.
+
+\subsubsection{Training Results}
+In this section, we present an overview of the best performing algorithms and filling method.
+Table \ref{tab_class:xtra_model_accuracies_best} provides an overview of some of the best performing algorithms and data.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Model} & \textbf{Data} & \textbf{Accuracy} \\
+\hline
+
+PR & SVC & Iterative & 95.24\% \\
+\hline
+NR & SVC & FFil & 71.43\% \\
+\hline
+SR & DecisionTreeClassifier & Mean & 61.90\% \\
+\hline
+WS & GradientBoostingClassifier & FFill & 71.43\% \\
+\hline
+SFST & DecisionTreeClassifier & Mode, KNN & 71.43\% \\
+\hline
+PR Ben. & SGDClassifier & Interpolated & 85.71\% \\
+\hline
+NR Ben. & KNeighborsClassifier & KNN & 66.67\% \\
+\hline
+SR Ben. & SVC & Mean & 76.19\% \\
+\hline
+WS Ben. & DecisionTreeClassifier & Custom, BFill & 71.43\% \\
+\hline
+SFST Ben. & MLPClassifier, GaussinNB & FFil & 71.43\% \\
+\hline
+
+\end{tabular}
+\caption{Best Model Accuracies}
+\label{tab_class:xtra_model_accuracies_best}
+\end{table}
+
+
+
+
+\subsubsection{Ensemble Learning}
+We also use the best performing five algorithms with their respective filling method and combined them.
+Overall, the ensemble learning did not increase the performance of our algorithms, as shown in table \ref{tab_xtra:class_ensemble}.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{Ensemble Accuracy} \\
+\hline
+PR      & 95.23\% & 90.48\% \\
+\hline
+NR      & 71.42\% & 61.90\%\\
+\hline
+SR      & 61.90\% & 61.90\%\\
+\hline
+WS      & 71.42\% & 66.66\%\\
+\hline
+SFST    & 71.42\% & 66.66\%\\
+\hline
+PR Ben. & 85.71\% & 76.19\%\\
+\hline
+NR Ben. & 66.66\% & 66.66\%\\
+\hline
+SR Ben. & 76.19\% & 76.19\%\\
+\hline
+WS Ben. & 71.42\% & 66.66\%\\
+\hline
+SFST Ben. & 71.42\% & 66.66\%\\
+\hline
+\end{tabular}
+\caption{Ensemble Model Accuracies}
+\label{tab_xtra:class_ensemble}
+\end{table}
+
+\subsubsection{Feature Selection}
+Similar to previous section, we perform feature reduction using our three techniques on this data.
+We present both the best overall accuracies using any number of features and the best accuracy fr each \ac{EF} using only two features.
+Tables \ref{tab_class_xtra:ensemble_class_acc} and \ref{tab_class_xtra:ensemble_prop_class_acc} respectively show the best overall accuracies and the best using two features.
+
+
+\paragraph{Ensemble Learning}
+Using a maximum of 10 features per model, we combine the top five for ensemble learning to increase the performance.
+Table \ref{tab_class_xtra:ensemble_reduction}, in the annexe, show the performance for each function before and after ensemble learning.
+
+
+
+\subsection{Specific Features and Extra (D5)}\label{sec:class_allxtra}
+In this section, we train our algorithms and compare them using our D4 dataset which consists of the specific and extra \textbf{features}.
+\subsubsection{Training Results}
+In terms of training results ,table \ref{tab_class:specxtra_model_accuracies_best} provides the overview of some of the best performing models.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Model} & \textbf{Data} & \textbf{Accuracy} \\
+\hline
+
+PR & RidgeClassifier & All Data & 95.4\% \\
+\hline
+NR & MLPClassifier & Interpolated, Itterative & 85.71\% \\
+\hline
+SR & SVCClassifier & BFill, Mean & 90.48\% \\
+\hline
+WS & GradientBoostingClassifier & BFill & 100.0\% \\
+\hline
+SFST & GradientBoostingClassifier & All Data & 95.24\% \\
+\hline
+PR Ben. & RidgeClassifier
+ & All Data & 100.0\% \\
+\hline
+NR Ben. & AdaBoostClassifier & All Data & 95.24\% \\
+\hline
+SR Ben. & RidgeClassifier, 
+ & All Data & 100.0\% \\ 
+ \hline
+WS Ben. & AdaBoostClassifier & Median, Mean, Interpolated, Iterative & 95.24\% \\
+\hline
+SFST Ben. & DecisionTreeClassifier & Median & 80.95\% \\
+\hline
+
+\end{tabular}
+\caption{Best Model Accuracies}
+\label{tab_class:specxtra_model_accuracies_best}
+\end{table}
+
+In this table, each \ac{EF} is shown with their best accuracy achieved with a specific model and data filling methods.
+
+
+
+\subsubsection{Ensemble Learning}
+The ensemble learning approach using the top five algorithms is shown in table \ref{tab_specxtra:class_ensemble}.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Accuracy} & \textbf{Ensemble Accuracy} \\
+\hline
+PR      & 95.24\% & 95.24\% \\
+\hline
+NR      & 85.71\% & 80.95\%\\
+\hline
+SR      & 90.47\% & 95.24\%\\
+\hline
+WS      & 100.0\% & 95.24\%\\
+\hline
+SFST    & 95.24\% & 95.24\%\\
+\hline
+PR Ben. & 100.0\% & 95.24\%\\
+\hline
+NR Ben. & 95.24\% & 95.24\%\\
+\hline
+SR Ben. & 100.0\% & 100.0\%\\
+\hline
+WS Ben. & 95.24\% & 95.24\%\\
+\hline
+SFST Ben. & 80.95\% & 76.19\%\\
+\hline
+\end{tabular}
+\caption{Ensemble Model Accuracies}
+\label{tab_specxtra:class_ensemble}
+\end{table}
+In this table, each \ac{EF} is shown with the best training accuracy and the ensemble learning results.
+
+Figures \ref{fig_class:specxtra_ensemble_pr}, \ref{fig_class:specxtra_ensemble_nr}, \ref{fig_class:specxtra_ensemble_sr}, \ref{fig_class:specxtra_ensemble_ws}, \ref{fig_class:specxtra_ensemble_sfst}, \ref{fig_class:specxtra_ensemble_pr_benefit}, \ref{fig_class:specxtra_ensemble_nr_benefit}, \ref{fig_class:specxtra_ensemble_sr_benefit}, \ref{fig_class:specxtra_ensemble_ws_benefit} and \ref{fig_class:specxtra_ensemble_sfst_benefit} show the confusion matrices for each \ac{EF} using ensemble learning.
+
+\subsubsection{Feature Selection}
+We also perform our three feature reduction techniques on this dataset.
+Tables \ref{tab_class_specxtra:ensemble_class_acc} and \ref{tab_class_specxtra:ensemble_prop_class_acc} respectively show the best overall accuracies and the best using two features.
+
+
+\paragraph{Ensemble Learning}
+Table \ref{tab_class_specxtra:ensemble_reduction} show the performance for each function before and after the ensemble learning and the features used.
+
+% Table for proportionate accuracy
+% Table for proportionate accuracy
+\begin{longtable}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{6cm}|}
+\hline
+\textbf{Function} & \textbf{Best Acc.} & \textbf{2nd Best Acc.} & \textbf{Ensemble Learning Acc.} & \textbf{Features Used} \\ \hline
+PR & 90.48\% & 85.71\% & 85.71\% & F28, F29, F31, F43, F44, F45 \\ \hline
+NR & 80.95\% & 76.19\% & 76.19\% & F24, F43, F44, F45 \\ \hline
+SR & 80.95\% & 80.95\% & 85.71\% & F28, F31, F34, F35, F43, F44, F45, Federal Class, OF22, Provincial Class \\ \hline
+WS & 95.24\% & 90.48\% & 90.48\% & F28, F31, F3e, F43, F44, F45, Federal Class, Hydrogeomorphic, Moss Cover, OF22, Provincial Class, Regime \\ \hline
+SFST & 95.24\% & 95.24\% & 95.24\% & F1, F14, F24, F31, F43, Federal Class \\ \hline
+PR Benefit & 90.48\% & 90.48\% & 90.48\% & F41, F48, F50, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, OF20, OF21, OF22, OF24, Phragmites, Provincial Class, Regime \\ \hline
+NR Benefit & 80.95\% & 80.95\% & 80.95\% & F41, Federal Class, Living Moss Depth, Moss Cover, OF10, OF19, OF21, OF9, Organic Depth, Provincial Class \\ \hline
+SR Benefit & 100.00\% & 100.00\% & 100.00\% & F24, F28, F41, Hydrogeomorphic, Moss Cover, OF19, OF20, OF21, Provincial Class, Regime, Surface Water Present \\ \hline
+WS Benefit & 95.24\% & 95.24\% & 95.24\% & F51, Living Moss Depth, OF17, OF18, OF23, OF24, OF8, Organic Depth, Soil Type, Vegetation Cover, Woody Canopy Cover \\ \hline
+SFST Benefit & 66.67\% & 61.90\% & 71.43\% & Federal Class, Hydrogeomorphic, Living Moss Depth, Moss Cover, OF18, OF22, OF25, OF28, Provincial Class, Regime, Soil Type, Surface Water \\ \hline
+\caption{Ensemble Learning Accuracy}
+\label{tab_class_specxtra:ensemble_reduction}
+\end{longtable}
+
+
+\newpage
+
+
+\section{Regression}\label{sec:regression}
+Regression is a common type of algorithm often used in \ac{ML} with a key difference to classification.
+Classification predicts a class, such as 0 or 1, while regression predicts a continuous value.
+In our case, the continuous value would be the score for the function or benefit of an \ac{EF}.
+The classification results from \ref{sec:class} have shown great promise and is interesting for the project.
+However, the algorithms trained for classification used the normalized scores both for the function and benefit.
+In turn, the algorithms are specific to regions, such as for NB, and depend on the calibration wetlands.
+If different calibration wetlands are used or the region modified, the algorithms could underperform significantly.
+For this reason, we propose using regression to predict the non-normalized scores of the various \ac{EF}.
+We use the non-normalize score such that it does our approach does not depend on calibration sites or region.
+The data was collected, modified and generated using simple pre-processing techniques as seen from section \ref{sec:data}.
+We present our results using all features, specific features, extra features and a combination of both.
+We use the Mean Squared Error (MSE) which averages the squares of the errors and is defined in equation \ref{eq:mse}.
+\begin{equation}
+\text{MSE} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2
+\label{eq:mse}
+\end{equation}
+
+\subsection{All Features(D1)}
+Similar to our classification code, we perform a grid search of various regression algorithms.
+We trained our algorithms and techniques for the\ac{NR},\ac{PR},\ac{SR},\ac{WS} and \ac{SFST} for both the function and the benefit.
+More information about the training procedure can be found within the github under the regression folder.
+The algorithms used for regression are explained in table \ref{tab:all_algorithms}.
+Similar to classification, we propose comparing the regression algorithms using all features for the \ac{EF}.
+We first train our algorithms using all features, implement dimension reduction, features selection and ensemble learning.
+\clearpage
+\subsubsection{Training Results}
+Table \ref{tab:model_reg_all_best} presents the training results using the best algorithm and filling method for each EF.
+\input{reg_section_all/reg_mse}
+Figures \ref{fig:pr_reg_training} to \ref{fig:sfst_ben_reg_training} show the best algorithm using various fill methods.
+
+
+\paragraph{Ensemble Learning}
+Ensemble learning consists of combining multiple models to increase the results by averaging out the predictions.
+Figures \ref{fig:pr_ensemble} to \ref{fig:sfst_ben_ensemble} show the graphical results of the ensemble learning approach while table \ref{tab:ensmeble} show the MSE.
+
+
+\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Function} & \textbf{best} & \textbf{Ensemble}  \\ \hline
+
+
+PR & 0.12 & 0.4621 \\ \hline
+NR & 0.15 & 0.4978\\\hline
+SR & 0.34 & 0.4796  \\ \hline
+WS & 0.25 & 0.4280  \\ \hline
+SFST & 0.21 & 0.5130  \\ \hline
+
+PR Benefit & 1.30 & 1.2220 \\ \hline
+NR Benefit & 0.38 & 0.8190 \\ \hline
+SR Benefit & 0.91 & 0.9797  \\ \hline
+WS Benefit & 0.98 & 0.9945  \\ \hline
+SFST Benefit & 0.57 & 0.6444  \\ \hline
+\caption{Ensemble Learning Results}
+\label{tab:ensmeble}
+\end{longtable}
+In this table, each \ac{EF} has the overall best accuracy and the ensemble learning which combines the top five models.
+
+
+\paragraph{Class Grouping}
+Similar to classification, our goal for this section is to predict the ratings for a specific site.
+We use the regression predictions to classify if a site is lower, moderate or higher.
+We first normalized the prediction results using the NB minimum and maximum of each function which are presented in table \ref{tab:norm}.
+We also collected the boundaries for each \ac{EF} in NB, which are presented in table \ref{tab:boundaries}
+
+\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Function} & \textbf{Minimum} & \textbf{Maximum}  \\ \hline
+
+WS & 1.58 & 8.61 \\ \hline
+PR & 2.07 & 10.0\\ \hline
+NR & 4.10 & 10.0 \\\hline
+SR & 2.29 & 10.0 \\ \hline
+SFST & 0.0 & 7.71 \\ \hline
+
+WS Benefit & 0.08 & 10.0 \\ \hline
+PR Benefit & 0.49 & 10.0\\ \hline
+NR Benefit & 0.71 & 10.0 \\ \hline
+SR Benefit & 0.49 & 8.79 \\ \hline
+SFST Benefit & 0.0 & 7.19 \\ \hline
+\caption{Minimum and Maximum}
+\label{tab:norm}
+\end{longtable}
+
+
+\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Function} & \textbf{Lower Boundary} & \textbf{Higher Boundary}  \\ \hline
+
+WS & 3.07 & 6.17\\ \hline
+PR & 3.66 & 6.11 \\ \hline
+NR &  2.06 & 4.42 \\\hline
+SR & 3.02 & 6.67 \\ \hline
+SFST & 1.05 &  6.51 \\ \hline
+
+WS Benefit & 2.65 & 6.50\\ \hline
+PR Benefit& 3.29 & 6.68\\ \hline
+NR Benefit& 4.10& 7.76\\ \hline
+SR Benefit & 2.94 & 6.19 \\ \hline
+SFST Benefit &1.86 & 5.30 \\ \hline
+\caption{Ecosystemic Boundaries}
+\label{tab:boundaries}
+\end{longtable}
+
+First, we provide the grouping using the best performing model for each \ac{EF}.
+We also provide an ensemble learning approach that combines the top five model.
+Table \ref{tab:grouping_1} and \ref{tab:grouping_2} respectively represent these results while \ref{tab:grouping_3} is a voting method.
+
+\begin{longtable}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Total Acc.}  \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Total Acc.}  \\ \hline
+\endhead
+
+WS & 100.00\% & 83.33\% & 100.00\% & 95.24\% \\ \hline
+PR & 75.00\% & 88.89\% & 87.50\% & 85.71\% \\ \hline
+NR & 85.71\% & 85.71\% & 100.00\% & 90.48\% \\ \hline
+SR & 100.00\% & 100.00\% & 100.00\% & 100.00\% \\ \hline
+SFST & 100.00\% & 57.14\% & 100.00\% & 85.71\% \\ \hline
+
+WS Benefit & 100.00\% & 100.00\% & 100.00\% & 100.00\% \\ \hline
+PR Benefit & 100.00\% & 85.71\% & 100.00\% & 95.24\% \\ \hline
+NR Benefit & 90.00\% & 100.00\% & 100.00\% & 95.24\% \\ \hline
+SR Benefit & 100.00\% & 88.89\% & 100.00\% & 95.24\% \\ \hline
+SFST Benefit & 87.50\% & 83.33\% & 100.00\% & 90.48\% \\ \hline
+
+\caption{Best Models Accuracies}
+\label{tab:grouping_1}
+\end{longtable}
+
+\begin{longtable}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Overall Acc.} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Overall Acc.} \\ \hline
+\endhead
+
+WS & 100.00\% & 83.33\% & 100.00\% & 95.24\% \\ \hline
+PR & 75.00\% & 88.89\% & 87.50\% & 85.71\% \\ \hline
+NR & 85.71\% & 85.71\% & 100.00\% & 90.48\% \\ \hline
+SR & 100.00\% & 100.00\% & 100.00\% & 100.00\% \\ \hline
+SFST & 100.00\% & 57.14\% & 100.00\% & 85.71\% \\ \hline
+WS Benefit & 100.00\% & 100.00\% & 100.00\% & 100.00\% \\ \hline
+PR Benefit & 100.00\% & 85.71\% & 75.00\% & 90.48\% \\ \hline
+NR Benefit & 90.00\% & 100.00\% & 100.00\% & 95.24\% \\ \hline
+SR Benefit & 100.00\% & 88.89\% & 100.00\% & 95.24\% \\ \hline
+SFST Benefit & 87.50\% & 83.33\% & 100.00\% & 90.48\% \\ \hline
+
+\caption{Accuracies of Ensemble Models}
+\label{tab:grouping_2}
+\end{longtable}
+
+\begin{longtable}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Overall Acc.} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Overall Acc.} \\ \hline
+\endhead
+
+WS & 100.00\% & 16.67\% & 75.00\% & 71.43\% \\ \hline
+PR & 100.00\% & 0.00\% & 62.50\% & 42.86\% \\ \hline
+NR & 100.00\% & 0.00\% & 28.57\% & 42.86\% \\ \hline
+SR & 100.00\% & 80.00\% & 0.00\% & 66.67\% \\ \hline
+SFST & 100.00\% & 85.71\% & 0.00\% & 57.14\% \\ \hline
+WS Benefit & 100.00\% & 0.00\% & 0.00\% & 52.38\% \\ \hline
+PR Benefit & 90.00\% & 0.00\% & 100.00\% & 61.90\% \\ \hline
+NR Benefit & 10.00\% & 0.00\% & 100.00\% & 23.81\% \\ \hline
+SR Benefit & 10.00\% & 0.00\% & 100.00\% & 14.29\% \\ \hline
+SFST Benefit & 0.00\% & 0.00\% & 100.00\% & 33.33\% \\ \hline
+
+\caption{Accuracies of Voting Systems}
+\label{tab:grouping_3}
+\end{longtable}
+
+\subsubsection{Dimension Reduction}
+Due to the large quantity of features, the models could struggle to learn valuable information.
+We decided to implement dimension reduction techniques to reduce the input vector during training.
+We compare various methods such as Primary Component Analysis (PCA) against non-reduced results.
+The various techniques and their descriptions are shown below:
+
+Dimension reduction does not aim to remove features, rather it uses all features and produces a smaller input vector.
+The model still requires all features, the dimension reduction algorithm compresses the features in a vector.
+Graphical results for the best algorithm and fill method can be found in figures \ref{fig:pr_reg_dimred_training} to \ref{fig:sfst_ben_reg_dimred_training}.
+
+
+
+\subsubsection{Feature Reduction}
+Similar to classification, we propose using feature reduction as our main contribution to this project.
+It consists of reducing the number of features used to train our algorithms while achieving similar results.
+Compared to dimension reduction, this technique does not create a new input vector.
+Rather, it finds the features which are most important to achieve similar results and trains the algorithms on those features.
+Feature reduction is interesting to our project since it would enable research to obtain the scores and ratings of \ac{EF}s with fewer features.
+By using less feature, on-site technicians would have less information to capture.
+This in turn would enable more sites to be analyzed to provide more sites to the WESP-AC.
+
+Similar to our classification section, we explore two SelectKBest algorithms and a variance threshold.
+Since most fill methods achieved similar results, we only present the results using the median fill method.
+Tables \ref{tab:lowest_rmse_feat} and \ref{tab:lowest_rmse_prop_feat} respectively present the lowest MSE using any amount of features and with a limit of two features.
+\input{reg_section_all/reg_featred_mse}
+
+Using the best model for each \ac{EF}, we also present graphical results in the annexe using figures \ref{fig:pr_reg_featred} to \ref{fig:sfst_ben_reg_featred}.
+
+These figure show the results for the three reduction techniques ranging from using two features to all features.
+It enables us to better understand how the number of features affect the overall performance.
+
+
+\paragraph{Ensemble Learning}
+We also performed ensemble learning on the feature reduction results.
+In the annexe, figures \ref{fig:pr_reg_featred_best_ensemble} to \ref{fig:sfst_ben_reg_featred_best_ensemble} show results for the top five models for each \ac{EF} regardeless of the number of features.
+
+Smilarly, figures \ref{fig:pr_reg_featred_smallest_ensemble} to \ref{fig:sfst_ben_reg_featred_smallest_ensemble} show graphs but with a limit of 10 features and results proportionate to the MSE.
+
+
+Table \ref{lowest_best_rmse_featred} show the results of the former while table \ref{lowest_smallest_rmse_featred} show the ladder.
+
+\paragraph{Class Grouping}
+We also propose class grouping with a limit of 10 features for each ecosystem function.
+We also present the class grouping results of ensemble learning and a voting system for the top five models.
+These results are presented respectively in table \ref{tab:grouping_1b}, \ref{tab:grouping_2b} and \ref{tab:grouping_3b}.
+
+
+
+
+
+\subsection{Specific Features(D2)}
+In this section, we perform regression on the \ac{EF}s using only their specific features.
+We use our D2 dataset using various algorithms and filling methods.
+
+\subsubsection{Results}
+Table \ref{tab:model_reg_specific_best} presents the training results using the best algorithm and filling method for each \ac{EF}.
+\input{reg_section_specific/training_mse}
+
+In the annexe, figures \ref{fig_reg_spec:pr_reg_training} to \ref{fig_reg_spec:sfst_ben_reg_training} show the best algorithm using various fill methods.
+
+
+\paragraph{Ensemble Learning}
+Figures \ref{fig:pr_ensemble} to \ref{fig:sfst_ben_ensemble} show the graphical results of the ensemble learning approach while table \ref{tab:ensmeble} show the MSE.
+
+
+\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Function} & \textbf{best} & \textbf{Ensemble}  \\ \hline
+
+
+PR & 0.10 & 0.4872 \\ \hline
+NR & 0.14 & 0.3103\\\hline
+SR & 0.09 & 0.3293  \\ \hline
+WS & 0.06 & 0.2399  \\ \hline
+SFST & 0.17 & 0.3002  \\ \hline
+
+PR Benefit & 0.21 & 1.011 \\ \hline
+NR Benefit & 0.07 & 0.3548 \\ \hline
+SR Benefit & 0.10 & 0.7878  \\ \hline
+WS Benefit & 0.36 & 0.7338  \\ \hline
+SFST Benefit & 1.59 & 1.2543  \\ \hline
+\caption{Ensemble Learning Results}
+\label{tab:ensmeble}
+\end{longtable}
+
+
+\paragraph{Class Grouping}
+Table \ref{tab:grouping_1_reg_spec} and \ref{tab:grouping_2_reg_spec} respectively represent these results while \ref{tab:grouping_3_reg_spec} is a voting method.
+
+\begin{longtable}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Total Acc.}  \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Total Acc.}  \\ \hline
+\endhead
+
+WS & 100.00\% & 100.00\% & 100.00\% & 100.00\% \\ \hline
+PR & 75.00\% & 88.89\% & 100.00\% & 90.48\% \\ \hline
+NR & 85.71\% & 71.43\% & 100.00\% & 85.71\% \\ \hline
+SR & 90.00\% & 100.00\% & 100.00\% & 95.24\% \\ \hline
+SFST & 83.33\% & 71.43\% & 100.00\% & 85.71\% \\ \hline
+
+WS Benefit & 100.00\% & 85.71\% & 100.00\% & 95.24\% \\ \hline
+PR Benefit & 100.00\% & 85.71\% & 100.00\% & 95.24\% \\ \hline
+NR Benefit & 90.00\% & 100.00\% & 100.00\% & 95.24\% \\ \hline
+SR Benefit & 100.00\% & 88.89\% & 100.00\% & 95.24\% \\ \hline
+SFST Benefit & 50.00\% & 66.67\% & 71.43\% & 61.90\% \\ \hline
+
+\caption{Best Models Accuracies}
+\label{tab:grouping_1_reg_spec}
+\end{longtable}
+
+\begin{longtable}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Overall Acc.} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Overall Acc.} \\ \hline
+\endhead
+
+WS & 100.00\% & 100.00\% & 100.00\% & 100.00\% \\ \hline
+PR & 50.00\% & 88.89\% & 100.00\% & 85.71\% \\ \hline
+NR & 71.43\% & 85.71\% & 100.00\% & 85.71\% \\ \hline
+SR & 90.00\% & 100.00\% & 100.00\% & 95.24\% \\ \hline
+SFST & 83.33\% & 71.43\% & 100.00\% & 85.71\% \\ \hline
+
+WS Benefit & 100.00\% & 85.71\% & 100.00\% & 95.24\% \\ \hline
+PR Benefit & 100.00\% & 85.71\% & 100.00\% & 95.24\% \\ \hline
+NR Benefit & 80.00\% & 100.00\% & 100.00\% & 90.48\% \\ \hline
+SR Benefit & 100.00\% & 88.89\% & 100.00\% & 95.24\% \\ \hline
+SFST Benefit & 50.00\% & 66.67\% & 71.43\% & 61.90\% \\ \hline
+
+\caption{Accuracies of Ensemble Models}
+\label{tab:grouping_2_reg_spec}
+\end{longtable}
+\begin{longtable}{|p{3cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Overall Acc.} \\ \hline
+\endfirsthead
+\hline
+\textbf{Function} & \textbf{Lower Acc.} & \textbf{Moderate Acc.} & \textbf{Higher Acc.} & \textbf{Overall Acc.} \\ \hline
+\endhead
+
+WS & 100.00\% & 0.00\% & 0.00\% & 52.38\% \\ \hline
+PR & 100.00\% & 0.00\% & 75.00\% & 47.62\% \\ \hline
+NR & 14.29\% & 28.57\% & 100.00\% & 47.62\% \\ \hline
+SR & 100.00\% & 60.00\% & 0.00\% & 61.90\% \\ \hline
+SFST & 0.00\% & 0.00\% & 100.00\% & 38.10\% \\ \hline
+
+WS Benefit & 9.09\% & 28.57\% & 100.00\% & 28.57\% \\ \hline
+PR Benefit & 0.00\% & 0.00\% & 100.00\% & 19.05\% \\ \hline
+NR Benefit & 0.00\% & 0.00\% & 100.00\% & 19.05\% \\ \hline
+SR Benefit & 0.00\% & 0.00\% & 100.00\% & 9.52\% \\ \hline
+SFST Benefit & 0.00\% & 0.00\% & 100.00\% & 33.33\% \\ \hline
+
+\caption{Accuracies of Voting Systems}
+\label{tab:grouping_3_reg_spec}
+\end{longtable}
+
+
+
+
+
+\subsubsection{Feature Reduction}
+Similar to classification, we propose using feature reduction as our main contribution to this project.
+It consists of removing or reducing the number of features used to train our algorithms while achieving similar results.
+Compared to dimension reduction, this technique does not create a new input vector.
+Rather, it finds the features which are most important to achieve similar results and trains the algorithms on those features.
+Feature reduction is interesting to our project since it would enable research to obtain the scores of functions with fewer features.
+By using less feature, on-site technicians would have less information to capture.
+This in turn would enable more sites to be analyzed to provide more sites to the WESP-AC.
+
+Similar to our classification section, we explore the two SelectKBest methods and a variance threshold.
+Since most fill methods achieved similar results, we only present the results using the median fill method.
+Tables \ref{fig_reg_spec:lowest_rmse_feat} and \ref{fig_reg_spec:lowest_rmse_prop_feat} present the lowest MSE using any amount of features and with a limit of two features.
+Table \ref{fig_reg_spec:all_rmse_feat} show a comparaison of our training MSE and our reduced feature MSE.
+
+
+\paragraph{Ensemble Learning}
+We also performed ensemble learning on the feature reduction results.
+In the annexe, figures \ref{fig_reg_spec:pr_reg_featred_best_ensemble} to \ref{fig_reg_spec:sfst_ben_reg_featred_best_ensemble} show ensemble learning for the top five models for each \ac{EF} regardeless of the number of features.
+
+
+Similarly, figures \ref{fig_reg_spec:pr_reg_featred_smallest_ensemble} to \ref{fig_reg_spec:sfst_ben_reg_featred_smallest_ensemble} show graphs but with a limit of 10 features and proportionate to the RMSE.
+
+
+Table \ref{fig_mse_spec:lowest_best_rmse_featred} show the results of the former while table \ref{fig_mse_spec:lowest_smallest_rmse_featred} show the ladder.
+
+
+\paragraph{Class Grouping}
+We also propose class grouping with a limit of 10 features for each ecosystem function.
+We present the results of ensemble learning and a voting system for the top five models.
+These results are presented respectively in table \ref{tab:grouping_1c}, \ref{tab:grouping_2c} and \ref{tab:grouping_3c}.
+
+
+
+
+\subsection{Extra Features(D3)}
+In this section, we perform regression on the EFs using extra features, known as our D3 dataset.
+
+\subsubsection{Results}
+Table \ref{tab_xtra:model_reg_specific_best} presents the training results using the best algorithm and filling method for each EF.
+This approach achieve poor performance throughout our experiment, for this reason it was not further explored.
+
+
+\clearpage
+\subsection{Specific and Extra Features(D5)}
+In this section, we perform regression on the \ac{EF}s using specific and extras features using our D4 dataset.
+
+\subsubsection{Results}
+Table \ref{tab_specxtra:model_reg_specific_best} presents the training results using the best algorithm and filling method for each \ac{EF}.
+
+Figures \ref{fig_reg_specxtra:pr_reg_training} to \ref{fig_reg_specxtra:sfst_ben_reg_training} show the best algorithm using various fill methods.
+
+\paragraph{Ensemble Learning}
+Figures \ref{fig:pr_ensemble} to \ref{fig:sfst_ben_ensemble} show the graphical results of the ensemble learning approach while table \ref{tab:ensmeble} show the MSE.
+
+
+\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Function} & \textbf{best} & \textbf{Ensemble}  \\ \hline
+
+
+PR & 0.12 & 0.5722 \\ \hline
+NR & 0.18 & 0.3344\\\hline
+SR & 0.21 & 0.3497  \\ \hline
+2692SFST & 0.18 & 0.3827  \\ \hline
+
+PR Benefit & 0.63 & 1.003 \\ \hline
+NR Benefit & 0.4377 & 0.3548 \\ \hline
+SR Benefit & 0.52 & 0.8806  \\ \hline
+WS Benefit & 1.08 & 2.5478  \\ \hline
+SFST Benefit & 2.29 & 1.5508  \\ \hline
+\caption{Ensemble Learning Results}
+\label{tab:ensmeble}
+\end{longtable}
+
+
+
+
+
+\subsubsection{Feature Reduction}
+We also propose using feature reduction on this dataset in the aim to find information about features.
+
+Tables \ref{fig_reg_specxtra:lowest_rmse_feat} and \ref{fig_reg_specxtra:lowest_rmse_prop_feat} respectively present the lowest MSE using any amount of features and with a limit of two features.
+Table \ref{fig_reg_specxtra:all_rmse_feat} show a comparaison of our training MSE and our reduced feature MSE.
+
+
+\paragraph{Ensemble Learning}
+We also performed ensemble learning on the feature reduction results.
+Figures \ref{fig_reg_specxtra:pr_reg_featred_best_ensemble} to \ref{fig_reg_specxtra:sfst_ben_reg_featred_best_ensemble} show ensemble learning for the top five models for each \ac{EF} regardeless of the number of features.
+
+
+Figures \ref{fig_reg_specxtra:pr_reg_featred_smallest_ensemble} to \ref{fig_reg_specxtra:sfst_ben_reg_featred_smallest_ensemble} show the same but with a limit of 10 features and proportionate to the RMSE.
+
+
+
+
+Table \ref{fig_mse_spec:lowest_best_rmse_featred} show the results of the former while table \ref{fig_mse_spec:lowest_smallest_rmse_featred} show the ladder.
+
+
+\paragraph{Class Grouping}
+We also propose class grouping with a limit of 10 features for each ecosystem function.
+We also present the class grouping results of ensemble learning and a voting system for the top five models.
+These results are presented respectively in table \ref{tab:grouping_1c}, \ref{tab:grouping_2c} and \ref{tab:grouping_3c}.
+
+
+\clearpage
+\section{Best Results ML}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{2.5 cm}|p{2cm}|p{3.5cm}|p{2cm}|p{3.5cm}|}
+\hline
+\textbf{Function} & \multicolumn{2}{c|}{\textbf{Classification}} & \multicolumn{2}{c|}{\textbf{Regression}} \\
+\hline
+\textbf{} & \textbf{Accuracy} & \textbf{Features} & \textbf{Accuracy} & \textbf{Features} \\
+\hline
+PR & \textbf{85.71\%} & \textbf{F43, F45} & 76.19\% & F43, F44, F45, F5, OF18, OF27, OF34, S4 \\ \hline
+NR & \textbf{80.95\%} & \textbf{F24, F43, F44, F45} & 80.95\% & F43, F44, F45, F5, OF18, OF27, OF34, S4 \\ \hline
+SR & 80.95\% & OF22, F35, F43, F44, F45, F49  & \textbf{90.48\%} & \textbf{F24, F28, F31, F43, F44, F45, F5,OF18, OF28}  \\ \hline
+WS & \textbf{90.48\% }&\textbf{ F43, F46} & 85.71\% & f22, F31, F43, F44, F46, F5, OF18, OF27 \\ \hline
+SFST & \textbf{95.24\%} & \textbf{F43, F44} &  80.95\% & F43, F44, F45, F46, OF18, OF27 \\ \hline
+PR Benefit & \textbf{90.48\% }& \textbf{OF24, F41} & 80.95\% & F14, F3c, F41, F44, OF18, OF19, OF27 \\ \hline
+NR Benefit & \textbf{100.00\% }& \textbf{OF9, OF10, OF19, OF21, 'F41} &  85.71\% & F41, F5, OF10, OF18, OF22, OF27, OF30\\ \hline
+SR Benefit & \textbf{100.00\%} & \textbf{OF19, OF21, F41} & 85.71\% & F12, F41, OF18, OF22, OF27, OF30 \\ \hline
+WS Benefit & \textbf{95.24\%} & \textbf{OF17, OF23} & 90.48\% & F5, OF17, OF18, OF23, OF27, OF34, S4 \\ \hline
+SFST Benefit &\textbf{ 80.95\%} & \textbf{F43, F44} & 80.95\% & F12, F43, F44, F45, F5, OF18, OF27, OF30 \\ \hline
+
+\end{tabular}
+\caption{Function Features Comparison}
+\label{tab:function_features_comparison}
+\end{table}
+\clearpage
+
+\subsection{Feature Pertubation}
+The models are trained using real datasets, and the best model for each configuration is selected based on its performance on a validation dataset. The configurations include different features and model hyperparameters. After identifying the best models, we perform a detailed analysis to evaluate how perturbations in individual features impact the model's predictions. The perturbations involve changing each feature to its possible values and observing the results.
+
+For each feature, we measure the change in model accuracy when the feature is perturbed. First, we calculate the original accuracy of the model on the test dataset. Then, we perturb the feature to each of its possible values, one at a time, and measure the accuracy of the model on the perturbed dataset. The difference between the perturbed accuracy and the original accuracy is computed to understand how sensitive the model's accuracy is to changes in each feature.
+
+We also measure the impact on the predicted class labels for each feature. We obtain the original predictions of the model on the test dataset and perturb the feature to each of its possible values. For each perturbation, we measure the percentage of samples where the perturbed predictions are lower or higher than the original predictions. The net class change impact is calculated as the difference between the higher and lower percentages. This analysis reveals how changes in each feature influence the predicted class labels, indicating whether perturbations tend to make the predictions higher or lower.
+
+The results of the feature perturbation analysis are visualized in plots showing the change in accuracy for each feature perturbation and the net impact on class predictions. Positive values in the net class change impact plots indicate more samples with higher predicted classes, while negative values indicate more samples with lower predicted classes. These visualizations provide a comprehensive understanding of how feature perturbations affect model performance and predictions.
+
+The possible class options for each feature are as follows:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item OF17: 4
+    \item OF19: 2
+    \item OF21: 4
+    \item OF22: 4
+    \item OF23: 3
+    \item F24: 6
+    \item F31: 5
+    \item F35: 5
+    \item F41: 2
+    \item F43: 3
+    \item F44: 3
+    \item F45: 5
+    \item F49: 4
+\end{enumerate}
+\end{multicols}
+
+For classification, figures \ref{fig:pr_accuracy_analysis} to \ref{fig:sfst_ben_accuracy_analysis} show the change in accuracy.
+Figures \ref{fig:pr_class_analysis} to \ref{fig:sfst_ben_class_analysis} show the net change in class.
+
+
+For regression, figures \ref{fig:pr_mse_analysis} to \ref{fig:sfst_ben_mse_analysis} show the net change in MSE while \ref{fig:pr_class_analysis_reg} to 
+\ref{fig:sfst_ben_class_analysis_reg} show the average change in class.
+
+
+
+\clearpage
+
+\subsection{Feature Values}
+We also compare the results by analyzing the values of the features for our predictions.
+Tables \ref{tab_analysis:PR_results} to \ref{tab_analysis:SFST_Benefit_results} show the prediction results using our classification models.
+Each table represents their unique \ac{EF} with the features used to generate predictions.
+We also show the actual values and the occurrence of this permutation.
+These results enables us to better understand how the algorithms react to change in features.
+
+
+
+\bibliography{References}
+
+
+\clearpage
+\section{Annexes}
+\subsection{Datasets}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|m{3cm}|c|m{11cm}|}
+        \hline
+        \textbf{Feature Name} & \textbf{Type} & \textbf{Description} \\
+        \hline
+        Provincial Class & Class (6) & This classification divides wetlands into six distinct types based on their ecological characteristics. It aids in the management and conservation of wetland resources. \\
+        \hline
+        Provincial Class & Class (10) & This extended classification categorizes wetlands into ten types, providing a more detailed understanding of wetland diversity for conservation strategies. \\
+        \hline
+        Water Regime & Class (4) & This indicator classifies water regimes into four types, describing the hydrological conditions of a wetland. It is essential for wetland management. \\
+        \hline
+        Vegetation Type & Class (7) & This classification identifies seven types of specific vegetation present in wetlands. It helps in assessing the ecological status of wetland areas. \\
+        \hline
+        Veg. Cover & Class (5) & This classification indicates the percentage cover of specific vegetation types, divided into five classes. It provides insights into vegetation distribution. \\
+        \hline
+        Woody Canopy & Class (4) & This classification describes the percentage cover of high woody canopy (over 5 meters), divided into four classes. It is useful for understanding forest structure in wetlands. \\
+        \hline
+        \% Moss Cover & Class (5) & This classification specifies the percentage cover of moss in wetlands, divided into five classes. It is important for ecological assessments. \\
+        \hline
+        Phragmites  & Class (3) & This feature indicates the presence of Phragmites (an invasive plant species) in a wetland, classified as yes or no. It is crucial for invasive species management. \\
+        \hline
+        Soil Type & Class (3) & This classification identifies the soil types in wetlands, divided into three classes. It helps in understanding soil characteristics and their impact on wetland ecology. \\
+        \hline
+        Surface Water & Class (7) & This classification indicates the percentage of surface water present in a wetland, divided into seven classes. It is important for hydrological studies. \\
+        \hline
+        Depth Sat. & Class (4) & This feature measures the depth of water saturation in soil, divided into four classes. It helps in understanding soil moisture conditions. \\
+        \hline
+        Depth Moss & Float & This feature measures the average depth of living moss in centimeters. It provides insights into the health and growth of moss in wetlands. \\
+        \hline
+        Organic Depth & Float & This feature measures the average depth of organic material in soil in centimeters. It is crucial for understanding soil composition and fertility. \\
+        \hline
+        Hydrogeomorphic & Class (11) & This classification divides wetlands into eleven hydrogeomorphic classes, based on their geomorphology and hydrology. It is essential for wetland characterization and management. \\
+        \hline
+    \end{tabular}
+    \caption{Feature Descriptions for Various Wetland Attributes}
+    \label{tab:data_xtra_features}
+\end{table}
+\clearpage
+\subsection{Features}
+
+\input{general/features}
+\clearpage
+\subsection{Machine Learning Algorithms}\label{sec:algorithms}
+\input{general/models}
+
+\subsection{Classification}\label{sec:class_annex}
+\subsubsection{All Features}
+\input{class_all_section/class_ensemble_figures}
+\clearpage
+\input{class_all_section/class_features_acc}
+\clearpage
+\input{class_all_section/class_reduction_figures}
+\clearpage
+
+\subsubsection{Specific Features}
+\input{class_specific_section/class_features_acc}
+\input{class_specific_section/class_ensemble_figures}
+
+\subsubsection{Extra Features}
+\input{./class_xtra_section/class_feature_acc}
+\begin{longtable}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{6cm}|}
+\hline
+\textbf{Function} & \textbf{Best Acc.} & \textbf{2nd Best Acc.} & \textbf{Ensemble Learning Acc.} & \textbf{Features Used} \\ \hline
+PR & 85.71\% & 85.71\% & 80.95\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+NR & 66.67\% & 66.67\% & 61.90\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+SR & 57.14\% & 52.38\% & 66.67\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+WS & 80.95\% & 80.95\% & 80.95\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+SFST & 71.43\% & 71.43\% & 76.19\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+PR Benefit & 76.19\% & 76.19\% & 71.43\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Phragmites, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+NR Benefit & 66.67\% & 66.67\% & 66.67\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+SR Benefit & 80.95\% & 76.19\% & 76.19\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+WS Benefit & 76.19\% & 71.43\% & 66.67\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Phragmites, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+SFST Benefit & 66.67\% & 61.90\% & 61.90\% & Federal Class, Hydrogeomorphic Class, Living Moss Depth, Moss Cover, Organic Depth, Provincial Class, Regime, Saturation Depth, Soil Type, Surface Water Present, Vegetation Cover, Vegetation Type, Woody Canopy Cover \\ \hline
+\caption{Ensemble Learning Accuracy}
+\label{tab_class_xtra:ensemble_reduction}
+\end{longtable}
+\clearpage
+\subsubsection{Specific + Extra Features}
+\input{class_specificxtra_section/class_feature_acc}
+\input{class_specificxtra_section/class_ensemble_figures}
+
+
+
+\clearpage
+\subsection{Regression Models}\label{sec:reg}
+\subsubsection{All Features}
+
+\input{reg_section_all/reg_ensemble}
+\clearpage
+\input{reg_section_all/reg_training_figures}
+\clearpage
+\input{reg_section_all/dim_reduction_algos}
+\clearpage
+\input{reg_section_all/dimred_results}
+\clearpage
+\input{reg_section_all/reg_featred_mse}
+\clearpage
+\input{reg_section_all/reg_featred_graphs}
+\clearpage
+\input{reg_section_all/reg_featred_ensemble_graphs}
+\clearpage
+\input{reg_section_all/reg_featred_ensemble_tables}
+\clearpage
+\input{reg_section_all/class_grouping}
+\clearpage
+
+\subsubsection{Specific Features}
+\input{reg_section_specific/reg_training_figures}
+\clearpage
+\input{reg_section_all/reg_ensemble}
+\clearpage
+\input{reg_section_specific/reg_featred_mse}
+\input{reg_section_specific/reg_featred_ensemble_graphs}
+\clearpage
+\input{reg_section_specific/reg_featred_ensemble_tables}
+\clearpage
+\input{reg_section_specific/class_grouping}
+\clearpage
+
+\subsubsection{Extra Features}
+\input{reg_section_xtra/training_mse}
+\clearpage
+
+\subsubsection{Specific + Extra Features}
+
+\input{reg_section_specxtra/training_mse}
+\clearpage
+\input{reg_section_specxtra/reg_training_figures}
+\clearpage
+\input{reg_section_specxtra/reg_ensemble}
+\clearpage
+\input{reg_section_specxtra/reg_featred_mse}
+\clearpage
+\input{reg_section_specxtra/reg_featred_ensemble_graphs}
+\clearpage
+\input{reg_section_specxtra/reg_featred_ensemble_tables}
+\clearpage
+\input{reg_section_specxtra/class_grouping}
+\clearpage
+
+\subsection{Results Analysis}
+\input{analysis/res1}
+\input{analysis/res2}
+
+
+\input{analysis/res1_reg}
+\input{analysis/res2_reg}
+
+
+
+\input{general/res_analysis}
+
+\subsection{CausalML}
+\input{causalml_section/graphs}
+\input{causalml_section/tables}
+\clearpage
+
+\section{Bibliography}
+\bibliographystyle{IEEEtran}
+\end{document}

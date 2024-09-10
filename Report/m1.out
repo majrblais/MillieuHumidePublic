@@ -1,0 +1,59 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Proposed Approach}{}% 2
+\BOOKMARK [1][-]{section.3}{Data}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Data Origin}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Data Modification}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Datasets}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Classification}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{All Features}{section.4}% 8
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Training Results}{subsection.4.1}% 9
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Feature Reduction}{subsection.4.1}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Specific Features}{section.4}% 11
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Training Results}{subsection.4.2}% 12
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Feature Reduction}{subsection.4.2}% 13
+\BOOKMARK [2][-]{subsection.4.3}{Dataset Comparison}{section.4}% 14
+\BOOKMARK [1][-]{section.5}{Regression}{}% 15
+\BOOKMARK [2][-]{subsection.5.1}{All Features}{section.5}% 16
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Training Results}{subsection.5.1}% 17
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Feature Reduction}{subsection.5.1}% 18
+\BOOKMARK [2][-]{subsection.5.2}{Specific Features}{section.5}% 19
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Training Results}{subsection.5.2}% 20
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Feature Reduction}{subsection.5.2}% 21
+\BOOKMARK [2][-]{subsection.5.3}{Dataset Comparison}{section.5}% 22
+\BOOKMARK [1][-]{section.6}{Detailed Analysis of EFs using ML}{}% 23
+\BOOKMARK [2][-]{subsection.6.1}{PR}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.2}{NR}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.3}{SR}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.4}{WS}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.5}{SFST}{section.6}% 28
+\BOOKMARK [1][-]{section.7}{CausalML}{}% 29
+\BOOKMARK [2][-]{subsection.7.1}{Results}{section.7}% 30
+\BOOKMARK [2][-]{subsection.7.2}{Discussion}{section.7}% 31
+\BOOKMARK [1][-]{section.8}{Tetrad}{}% 32
+\BOOKMARK [1][-]{section.9}{Future Directions}{}% 33
+\BOOKMARK [2][-]{subsection.9.1}{Data}{section.9}% 34
+\BOOKMARK [2][-]{subsection.9.2}{Machine Learning}{section.9}% 35
+\BOOKMARK [2][-]{subsection.9.3}{Causal Inference}{section.9}% 36
+\BOOKMARK [1][-]{section.10}{Conclusion}{}% 37
+\BOOKMARK [2][-]{subsection.10.1}{Classification Analysis}{section.10}% 38
+\BOOKMARK [2][-]{subsection.10.2}{Regression Analysis}{section.10}% 39
+\BOOKMARK [2][-]{subsection.10.3}{Phosphorus Retention \(PR\)}{section.10}% 40
+\BOOKMARK [2][-]{subsection.10.4}{Nitrate Removal \046 Retention \(NR\)}{section.10}% 41
+\BOOKMARK [2][-]{subsection.10.5}{Sediment Retention \046 Stabilization \(SR\)}{section.10}% 42
+\BOOKMARK [2][-]{subsection.10.6}{Water Storage \046 Delay \(WS\)}{section.10}% 43
+\BOOKMARK [2][-]{subsection.10.7}{Stream Flow Support \(SFST\)}{section.10}% 44
+\BOOKMARK [2][-]{subsection.10.8}{Causal Inference with CausalML}{section.10}% 45
+\BOOKMARK [2][-]{subsection.10.9}{Challenges with Tetrad}{section.10}% 46
+\BOOKMARK [2][-]{subsection.10.10}{Overall Conclusion}{section.10}% 47
+\BOOKMARK [1][-]{section.11}{References}{}% 48
+\BOOKMARK [1][-]{section.12}{Annexes}{}% 49
+\BOOKMARK [2][-]{subsection.12.1}{Datasets}{section.12}% 50
+\BOOKMARK [2][-]{subsection.12.2}{Features}{section.12}% 51
+\BOOKMARK [2][-]{subsection.12.3}{Machine Learning Algorithms}{section.12}% 52
+\BOOKMARK [2][-]{subsection.12.4}{Classification}{section.12}% 53
+\BOOKMARK [3][-]{subsubsection.12.4.1}{All Features}{subsection.12.4}% 54
+\BOOKMARK [3][-]{subsubsection.12.4.2}{Specific Features}{subsection.12.4}% 55
+\BOOKMARK [2][-]{subsection.12.5}{Regression Models}{section.12}% 56
+\BOOKMARK [3][-]{subsubsection.12.5.1}{All Features}{subsection.12.5}% 57
+\BOOKMARK [3][-]{subsubsection.12.5.2}{Specific Features}{subsection.12.5}% 58
+\BOOKMARK [2][-]{subsection.12.6}{CausalML}{section.12}% 59

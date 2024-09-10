@@ -1,0 +1,35 @@
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} \\ \hline
+
+WS & 0.4285 & 57  \\ \hline
+NR & 0.3347 & 103  \\ \hline
+PR &  0.2470 & 78 \\ \hline
+SR &  0.5908 & 41  \\ \hline
+SFST &  0.4289 & 39  \\ \hline
+WS Benefit & 0.9033 & 103  \\ \hline
+NR Benefit &  1.1703 & 72 \\ \hline
+PR Benefit &  0.9819 & 23  \\ \hline
+SR Benefit &  0.6934 & 103  \\ \hline
+SFST Benefit & 0.6477  & 93   \\ \hline
+\caption{Ensemble Learning using All Features}
+\label{fig_mse_spec:lowest_best_rmse_featred}
+\end{longtable}
+
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Function} & \textbf{RMSE} & \textbf{\# Feat.} & \textbf{Selected Features} \\ \hline
+
+WS & 0.7547 & 6 & F22,F24,F31,F43,F44,F46 \\ \hline
+NR & 0.6878 & 20 & F1,F12,F23,F24,F25,F28,F29,F31,F43,F44, F45,D46,D65,F68,OF18,OF34,OF37,S2,S4,S5 \\ \hline
+PR &  0.7463 & 4 &F43,F44,F45,F46 \\ \hline
+SR &  1.1949 & 8 & F1,F24,F28,F31,F43,F44,F45,F46\\ \hline
+SFST &  0.5659 & 4 & F43,F44,F45,F46\\ \hline
+WS Benefit & 1.0354 & 6 & F51,OF15,OF17,OF18,OF23,OF24 \\ \hline
+NR Benefit &  1.9944 & 7 &  F20,F31,F3c,F41,F43,OF18,0F22 \\ \hline
+PR Benefit &  1.2953 & 6 &  F14,F3c,F41,F43,F44.OF19\\ \hline
+SR Benefit &  1.2354 & 8 &  F12,F43,F44,F45,F46,F53,OF18,OF30 \\ \hline
+SFST Benefit & 1.1440  & 20 & F1, F12, F14, F23, F25, F29, F31,  F39, F3d, F43, F44, F45, F46,  F53, F57, F6, OF14, OF18, OF28, OF30 \\ \hline
+\caption{Ensemble Learning using limited features}
+\label{fig_mse_spec:lowest_smallest_rmse_featred}
+\end{longtable}

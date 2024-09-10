@@ -1,0 +1,30 @@
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Model} & \textbf{Data} & \textbf{MSE} \\
+\hline
+PR & AdaBoostRegressor & iterative & 0.12 \\
+\hline
+NR & AdaBoostRegressor & ffill & 0.18 \\
+\hline
+SR & MLPRegressor & ffill & 0.21 \\
+\hline
+WS & MLPRegressor & iterative & 0.20 \\
+\hline
+SFST & MLPRegressor & custom & 0.18 \\
+\hline
+PR Benefit & RANSACRegressor & mean & 0.63 \\
+\hline
+NR Benefit & MLPRegressor & interpolated.csv & 0.10 \\
+\hline
+SR Benefit & TheilSenRegressor & interpolated.csv & 0.52 \\
+\hline
+WS Benefit & AdaBoostRegressor & median & 1.08 \\
+\hline
+SFST Benefit & DecisionTreeRegressor & median & 2.29 \\
+\hline
+\end{tabular}
+\caption{Model MSE}
+\label{tab_specxtra:model_reg_specific_best}
+\end{table}

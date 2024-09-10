@@ -1,0 +1,31 @@
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Function} & \textbf{Model} & \textbf{Data} & \textbf{MSE} \\
+\hline
+PR & AdaBoostRegressor & Iterative & 0.10 \\
+\hline
+NR & AdaBoostRegressor & Median & 0.14 \\
+\hline
+SR & MLPRegressor & Custom & 0.09 \\
+\hline
+WS & MLPRegressor & Iterative & 0.06 \\
+\hline
+SFST & AdaBoostRegressor & Median & 0.17 \\
+\hline
+PR Benefit & RandomForestRegressor & KNN & 0.21 \\
+\hline
+NR Benefit & MLPRegressor & Custom & 0.07 \\
+\hline
+SR Benefit & TensorFlow & BFill & 0.10 \\
+\hline
+WS Benefit & DecisionTreeRegressor & Mode & 0.36 \\
+\hline
+SFST Benefit & TheilSemRegressor & BFill & 1.59 \\
+\hline
+
+\end{tabular}
+\caption{Model MSE}
+\label{tab:model_reg_specific_best}
+\end{table}

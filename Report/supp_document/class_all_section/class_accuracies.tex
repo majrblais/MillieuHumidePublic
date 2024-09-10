@@ -1,0 +1,745 @@
+
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_pr}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.86 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.86 & SVC & 0.90 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+custom & RidgeClassifier & 0.86 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.86 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.90 \\
+ & MLPClassifier & 0.95 & LogisticRegression & 0.95 \\
+ & SGDClassifier & 0.81 & SVC & 0.90 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+ffill & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.76 & SVC & 0.90 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.86 \\
+\hline
+Interpolated & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.90 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+iterative & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.86 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+knn & RidgeClassifier & 0.90 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+mean & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.90 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+median & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.43 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+mode & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.90 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.43 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+\caption{Classification Accuracy for PR}
+\label{tab:class_acc_pr}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_nr}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.57 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.71 & SVC & 0.67 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+custom & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.67 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+ffill & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.76 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.71 & SVC & 0.67 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+Interpolated & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.57 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.57 & SVC & 0.67 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+iterative & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.57 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.67 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+knn & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.67 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.57 \\
+ & MLPClassifier & 0.57 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.57 & SVC & 0.76 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.67 \\
+\hline
+mean & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.57 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.62 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+median & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.71 \\
+ & GaussianNB & 0.48 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+mode & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.57 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.62 \\
+ & GaussianNB & 0.48 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+\caption{Classification Accuracy for NR}
+\label{tab:class_acc_nr}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_sr}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.81 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.62 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.57 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.71 & SVC & 0.67 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+custom & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.62 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.76 & SVC & 0.76 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+ffill & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.76 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.67 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.81 & SVC & 0.81 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+Interpolated & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.81 \\
+ & GradientBoostingClassifier & 0.86 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.76 & SVC & 0.81 \\
+ & GaussianNB & 0.81 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+iterative & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.81 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.71 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.76 \\
+ & SGDClassifier & 0.71 & SVC & 0.81 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+knn & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.81 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.62 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.76 & SVC & 0.81 \\
+ & GaussianNB & 0.76 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+mean & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.76 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.62 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.86 & SVC & 0.81 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+median & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.71 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.62 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.67 & SVC & 0.86 \\
+ & GaussianNB & 0.76 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+mode & RidgeClassifier & 0.62 & DecisionTreeClassifier & 0.71 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.62 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.86 & SVC & 0.76 \\
+ & GaussianNB & 0.81 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+\caption{Classification Accuracy for SR}
+\label{tab:class_acc_sr}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_ws}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.81 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.86 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.71 & SVC & 0.76 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+custom & RidgeClassifier & 0.62 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.52 & SVC & 0.67 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.67 \\
+\hline
+ffill & RidgeClassifier & 0.57 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.67 & SVC & 0.71 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+Interpolated & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.71 & SVC & 0.71 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+iterative & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.62 & SVC & 0.76 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+knn & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.67 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+mean & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.48 & SVC & 0.76 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+median & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.57 & SVC & 0.67 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+mode & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.57 & SVC & 0.76 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.67 \\
+\hline
+\caption{Classification Accuracy for WS}
+\label{tab:class_acc_ws}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_sfst}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.86 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.76 & SVC & 0.76 \\
+ & GaussianNB & 0.43 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+custom & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.71 & SVC & 0.81 \\
+ & GaussianNB & 0.48 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+ffill & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.76 & SVC & 0.81 \\
+ & GaussianNB & 0.38 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+Interpolated & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.86 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.76 & SVC & 0.76 \\
+ & GaussianNB & 0.38 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+iterative & RidgeClassifier & 0.76 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.57 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.71 & SVC & 0.76 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+knn & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.62 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.76 \\
+ & GaussianNB & 0.48 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+mean & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.71 & SVC & 0.76 \\
+ & GaussianNB & 0.43 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+median & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.76 \\
+ & GaussianNB & 0.33 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+mode & RidgeClassifier & 0.90 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.76 \\
+ & GaussianNB & 0.33 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+\caption{Classification Accuracy for SFST}
+\label{tab:class_acc_sfst}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_pr_benefit}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.86 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.86 & SVC & 0.90 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+custom & RidgeClassifier & 0.86 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.86 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.90 \\
+ & MLPClassifier & 0.95 & LogisticRegression & 0.95 \\
+ & SGDClassifier & 0.81 & SVC & 0.90 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+ffill & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.76 & SVC & 0.90 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.86 \\
+\hline
+Interpolated & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.90 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+iterative & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.86 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+knn & RidgeClassifier & 0.90 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.95 \\
+\hline
+mean & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.90 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+median & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.95 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.43 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+mode & RidgeClassifier & 0.81 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.90 \\
+ & MLPClassifier & 0.81 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.81 & SVC & 0.86 \\
+ & GaussianNB & 0.43 & LinearDiscriminantAnalysis & 0.90 \\
+\hline
+\caption{Classification Accuracy for PR Benefit}
+\label{tab:class_acc_pr_benefit}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_nr_benefit}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.57 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.71 & SVC & 0.67 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+custom & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.67 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+ffill & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.76 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.71 & SVC & 0.67 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+Interpolated & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.57 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.57 & SVC & 0.67 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+iterative & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.57 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.67 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+knn & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.67 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.57 \\
+ & MLPClassifier & 0.57 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.57 & SVC & 0.76 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.67 \\
+\hline
+mean & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.57 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.62 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+median & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.71 & RandomForestClassifier & 0.71 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.71 \\
+ & GaussianNB & 0.48 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+mode & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.62 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.76 \\
+ & AdaBoostClassifier & 0.76 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.57 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.62 \\
+ & GaussianNB & 0.48 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+\caption{Classification Accuracy for NR Benefit}
+\label{tab:class_acc_nr_benefit}
+\end{longtable}
+
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_sr_benefit}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 1.00 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 0.95 & SVC & 1.00 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+custom & RidgeClassifier & 1.00 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 1.00 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 1.00 & SVC & 1.00 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+ffill & RidgeClassifier & 1.00 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 1.00 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 1.00 & SVC & 1.00 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+Interpolated & RidgeClassifier & 1.00 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 1.00 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.95 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 0.95 & SVC & 1.00 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+Iterative & RidgeClassifier & 1.00 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 0.90 & SVC & 1.00 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+knn & RidgeClassifier & 1.00 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.95 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 1.00 & SVC & 1.00 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+mean & RidgeClassifier & 1.00 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 1.00 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.90 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 0.95 & SVC & 1.00 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+median & RidgeClassifier & 1.00 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 1.00 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 0.95 & SVC & 1.00 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+mode & RidgeClassifier & 1.00 & DecisionTreeClassifier & 1.00 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.95 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 1.00 & LogisticRegression & 1.00 \\
+ & SGDClassifier & 1.00 & SVC & 1.00 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 1.00 \\
+\hline
+\caption{Classification Accuracy for SR Benefit}
+\label{tab:class_acc_sr_benefit}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_ws_benefit}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.81 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.86 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.71 & SVC & 0.76 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+custom & RidgeClassifier & 0.62 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.90 \\
+ & SGDClassifier & 0.52 & SVC & 0.67 \\
+ & GaussianNB & 0.67 & LinearDiscriminantAnalysis & 0.67 \\
+\hline
+ffill & RidgeClassifier & 0.57 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.67 & SVC & 0.71 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+Interpolated & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.71 & SVC & 0.71 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+iterative & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.62 & SVC & 0.76 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+knn & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.67 \\
+ & GaussianNB & 0.71 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+mean & RidgeClassifier & 0.76 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.95 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.86 \\
+ & SGDClassifier & 0.48 & SVC & 0.76 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+median & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.90 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.62 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.57 & SVC & 0.67 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.71 \\
+\hline
+mode & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.95 & RandomForestClassifier & 0.90 \\
+ & AdaBoostClassifier & 0.86 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.57 & SVC & 0.76 \\
+ & GaussianNB & 0.52 & LinearDiscriminantAnalysis & 0.67 \\
+\hline
+\caption{Classification Accuracy for WS Benefit}
+\label{tab:class_acc_ws_benefit}
+\end{longtable}
+
+\begin{longtable}{|c|c|c|c|c|}
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}{{Continuation of Table \ref{tab:class_acc_sfst_benefit}}} \\
+\hline
+\textbf{Data.} & \textbf{Model} & \textbf{Acc.} & \textbf{Model} & \textbf{Acc.} \\ \hline
+\endhead
+bfill & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.67 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.76 \\
+ & SGDClassifier & 0.71 & SVC & 0.76 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+custom & RidgeClassifier & 0.62 & DecisionTreeClassifier & 0.81 \\
+ & GradientBoostingClassifier & 0.86 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.90 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.71 \\
+ & SGDClassifier & 0.67 & SVC & 0.76 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+ffill & RidgeClassifier & 0.86 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.81 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.76 \\
+ & SGDClassifier & 0.62 & SVC & 0.71 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.76 \\
+\hline
+Interpolated & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.90 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.76 \\
+ & SGDClassifier & 0.71 & SVC & 0.71 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+iterative & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.71 \\
+ & MLPClassifier & 0.76 & LogisticRegression & 0.76 \\
+ & SGDClassifier & 0.71 & SVC & 0.76 \\
+ & GaussianNB & 0.57 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+knn & RidgeClassifier & 0.71 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.90 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.76 \\
+ & SGDClassifier & 0.71 & SVC & 0.71 \\
+ & GaussianNB & 0.62 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+median & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.86 \\
+ & GradientBoostingClassifier & 0.76 & RandomForestClassifier & 0.81 \\
+ & AdaBoostClassifier & 0.90 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.67 & LogisticRegression & 0.71 \\
+ & SGDClassifier & 0.57 & SVC & 0.76 \\
+ & GaussianNB & 0.38 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+mode & RidgeClassifier & 0.67 & DecisionTreeClassifier & 0.95 \\
+ & GradientBoostingClassifier & 0.81 & RandomForestClassifier & 0.86 \\
+ & AdaBoostClassifier & 0.81 & KNeighborsClassifier & 0.76 \\
+ & MLPClassifier & 0.71 & LogisticRegression & 0.81 \\
+ & SGDClassifier & 0.62 & SVC & 0.76 \\
+ & GaussianNB & 0.38 & LinearDiscriminantAnalysis & 0.81 \\
+\hline
+\caption{Classification Accuracy for SFST Benefit}
+\label{tab:class_acc_sfst_benefit}
+\end{longtable}

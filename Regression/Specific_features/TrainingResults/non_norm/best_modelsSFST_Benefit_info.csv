@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_custom_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'sag'}",1.3953717225024893
+output_ffill_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'saga'}",1.3951376255037298
+output_interpolated.csv,RANSACRegressor,"{'ransacregressor__loss': 'absolute_error', 'ransacregressor__max_trials': 10, 'ransacregressor__min_samples': 2}",1.3082343723497676
+output_iterative_imputed.csv,SGDRegressor,"{'sgdregressor__learning_rate': 'optimal', 'sgdregressor__loss': 'huber', 'sgdregressor__penalty': None, 'sgdregressor__warm_start': False}",1.3847933340469933
+output_knn_imputed_custom.csv,TheilSenRegressor,"{'theilsenregressor__max_subpopulation': 10, 'theilsenregressor__n_subsamples': 25}",1.3563165661495886
+output_mean_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'cholesky'}",1.3934750579470137
+output_mode_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'sag'}",1.3884453525994358
+output_median_imputed.csv,Ridge,"{'ridge__alpha': 1.0, 'ridge__solver': 'sag'}",1.3870749551314314
+output_bfill_imputed.csv,DecisionTreeRegressor,"{'decisiontreeregressor__criterion': 'friedman_mse', 'decisiontreeregressor__max_features': 3, 'decisiontreeregressor__min_samples_split': 4, 'decisiontreeregressor__splitter': 'random'}",1.3773635467613805

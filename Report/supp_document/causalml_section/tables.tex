@@ -1,0 +1,1700 @@
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.536779\\
+'F45': 0.192897\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF8': -0.012789\\
+'OF13': -0.009090\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.515596\\
+'F29': 0.037213\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F65': -0.022642\\
+'F24': -0.017126\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.346256\\
+'OF26': 0.021221\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3d': -0.003275\\
+'F13': -0.000601\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.182576\\
+'OF26': 0.042053\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F13': -0.001210\\
+'F3f': -0.000922\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.431664\\
+'OF26': 0.020958\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F15': -0.001777\\
+'F49': -0.001246\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.708910\\
+'F3d': 0.003255\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': -0.055648\\
+'F41': 0.000000\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': 1.309096\\
+'F14': 0.515494\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': -2.923432\\
+'F25': -0.309051\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.441983\\
+'F45': 0.245119\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF2': 0.000000\\
+'F39': 0.000000\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.048764\\
+'OF27': 0.010900\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -0.000016\\
+'F3g': -0.000009\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.383303\\
+'F45': 0.171036\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF8': -0.004480\\
+'OF38': -0.003056\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.542174\\
+'F45': 0.191382\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF8': -0.013750\\
+'OF13': -0.008700\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.590500\\
+'F7': 0.202867\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF8': -0.012748\\
+'OF6': -0.011382\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF21': 9.560983\\
+'OF20': 7.545941\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F52': -0.194904\\
+'OF16': -0.166460\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.393848\\
+'F45': 0.244852\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF28': -0.006563\\
+'OF8': -0.006284\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature OF21': 0.702052\\
+'Feature F43': 0.625989\\
+'Feature OF20': 0.544127\\
+'Feature F45': 0.135707\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F25': -0.009865\\
+'Feature OF16': -0.011711\\
+'Feature OF6': -0.011840\\
+'Feature F5': -0.138349\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 1321 points\\
+'Feature F1': 1186 points\\
+'Feature F14': 1171 points\\
+'Feature F7': 1150 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature OF28': 421 points\\
+'Feature OF13': 408 points\\
+'Feature F39': 381 points\\
+'Feature OF2': 377 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for PR Models}
+\label{tab:important_features_PR}
+\end{table}
+
+
+
+
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.390725\\
+'F44': 0.165844\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF6': -0.020725\\
+'OF33': -0.013250\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.774561\\
+'F24': 0.057620\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3e': -0.008175\\
+'F49': -0.005408\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.620630\\
+'F24': 0.022750\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3c': -0.000362\\
+'F12': -0.000226\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.817959\\
+'F12': 0.218402\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F47': -0.011895\\
+'F21': -0.009079\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.720332\\
+'F24': 0.038324\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F50': -0.000827\\
+'F12': -0.000806\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.533441\\
+'OF27': 0.061891\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF13': -0.000245\\
+'OF9': -0.000204\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.153295\\
+'F45': 0.111910\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F2': -0.017481\\
+'F14': -0.014245\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.506674\\
+'F45': 0.266837\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF2': 0.000000\\
+'F38': 0.000000\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.025143\\
+'OF27': 0.006574\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF5': -0.000005\\
+'F3g': -0.000004\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.428843\\
+'F45': 0.148416\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF6': -0.007226\\
+'OF34': -0.006675\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.406266\\
+'F44': 0.176189\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF6': -0.021310\\
+'OF8': -0.014864\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.346340\\
+'F44': 0.199381\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF6': -0.027631\\
+'OF33': -0.018511\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F45': 0.448435\\
+'F44': 0.221599\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F33': -0.038320\\
+'F8': -0.023706\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.316211\\
+'F44': 0.201227\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF6': -0.027462\\
+'OF33': -0.015219\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 0.612435\\
+'Feature F45': 0.117268\\
+'Feature F44': 0.081121\\
+'Feature F5': 0.053705\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F8': -0.004219\\
+'Feature F33': -0.004765\\
+'Feature OF6': -0.005082\\
+'Feature OF33': -0.006181\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 1343 points\\
+'Feature F45': 1220 points\\
+'Feature F44': 1151 points\\
+'Feature F3f': 1137 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F32': 377 points\\
+'Feature F67': 360 points\\
+'Feature F33': 358 points\\
+'Feature F39': 352 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for NR Models}
+\label{tab:important_features_NR}
+\end{table}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.147478\\
+'F45': 0.091115\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF24': -0.025517\\
+'F24': -0.016204\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.754513\\
+'F22': 0.147253\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F20': -0.014787\\
+'F29': -0.009592\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.511286\\
+'F22': 0.110634\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F20': -0.003293\\
+'F46': -0.001353\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.575029\\
+'F22': 0.124296\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F20': -0.006019\\
+'F2': -0.002894\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.391152\\
+'F22': 0.044818\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF6': -0.003275\\
+'F51': -0.002221\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.559163\\
+'OF27': 0.011390\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF13': -0.001688\\
+'OF9': -0.001394\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.805548\\
+'OF27': 0.188689\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F45': -0.084892\\
+'F3e': -0.080038\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.898375\\
+'F25': 0.020736\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': -0.003515\\
+'OF18': -0.000012\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.036869\\
+'F43': 0.000169\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': -0.001506\\
+'OF18': -0.000024\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.726329\\
+'F3b': 0.036111\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F68': -0.006553\\
+'F6': -0.005987\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.163232\\
+'F52': 0.098785\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF24': -0.025737\\
+'F24': -0.017471\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.185014\\
+'F52': 0.186445\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF24': -0.041529\\
+'F24': -0.022150\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.787310\\
+'F22': 0.434157\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F12': -0.331444\\
+'F18': -0.283120\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.195570\\
+'F52': 0.204452\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF24': -0.036281\\
+'OF21': -0.026817\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 0.951765\\
+'Feature F5': 0.097695\\
+'Feature F22': 0.091916\\
+'Feature F52': 0.048698\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature OF20': -0.008094\\
+'Feature F62': -0.009468\\
+'Feature F18': -0.020177\\
+'Feature F12': -0.026529\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 1346 points\\
+'Feature F22': 1265 points\\
+'Feature OF22': 1214 points\\
+'Feature F25': 1178 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F68': 451 points\\
+'Feature F18': 439 points\\
+'Feature OF8': 398 points\\
+'Feature F62': 387 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for WS Models}
+\label{tab:important_features_WS}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.145591\\
+'F1': 0.032092\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F49': -0.007396\\
+'F15': -0.004882\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.956398\\
+'F48': 0.016230\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF3': -0.012433\\
+'F47': -0.006130\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.658540\\
+'F21': 0.016892\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -0.003418\\
+'F2': -0.001442\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.507879\\
+'F44': 0.017893\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F65': -0.002316\\
+'OF15': -0.001130\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.680548\\
+'F21': 0.008374\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -0.005203\\
+'F8': -0.003271\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.650557\\
+'OF27': 0.009803\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF13': -0.001657\\
+'OF9': -0.001100\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 6.260377\\
+'OF27': 1.699317\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F35': -0.410244\\
+'F36': -0.313736\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.809538\\
+'F45': 0.102403\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -0.000019\\
+'OF2': 0.000000\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.026701\\
+'F43': 0.000142\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -0.000016\\
+'OF5': -0.000004\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.811364\\
+'F34': 0.018542\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F15': -0.002554\\
+'OF8': -0.002456\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.142568\\
+'F1': 0.031358\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F49': -0.007572\\
+'F15': -0.004914\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.219160\\
+'F1': 0.046488\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F49': -0.009860\\
+'F31': -0.005465\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.518405\\
+'F34': 0.129466\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F36': -0.016735\\
+'F48': -0.012570\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.308138\\
+'F1': 0.044073\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F49': -0.008300\\
+'F20': -0.005366\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 1.039090\\
+'Feature F5': 0.497852\\
+'Feature OF27': 0.122599\\
+'Feature F45': 0.035529\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F4': -0.014221\\
+'Feature OF9': -0.019349\\
+'Feature F36': -0.023610\\
+'Feature F35': -0.027724\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 1305 points\\
+'Feature F1': 1149 points\\
+'Feature F34': 1093 points\\
+'Feature F47': 1076 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature OF8': 399 points\\
+'Feature F58': 378 points\\
+'Feature F49': 330 points\\
+'Feature F3g': 300 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for SFST Models}
+\label{tab:important_features_SFST}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.703613\\
+'OF19': 0.405519\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.055471\\
+'F48': -0.012283\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.933778\\
+'OF19': 0.555612\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF30': -0.028011\\
+'OF11': -0.001123\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.877237\\
+'OF19': 0.507981\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF5': -0.004187\\
+'F65': -0.001427\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.949723\\
+'OF19': 0.528025\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3c': -0.001661\\
+'OF11': -0.000769\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 1.009670\\
+'OF19': 0.518803\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F17': -0.000691\\
+'OF30': -0.000016\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.288869\\
+'OF14': 0.000170\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': -0.042150\\
+'OF26': -0.000768\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.069968\\
+'F45': 0.054308\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': -0.066358\\
+'OF16': -0.048331\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.073112\\
+'F41': 0.045888\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF5': -0.010997\\
+'OF13': -0.001769\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': 0.010856\\
+'F5': 0.009396\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF5': -0.000006\\
+'F3a': -0.000004\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.154028\\
+'OF21': 0.064929\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF25': -0.018223\\
+'F15': -0.013258\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.691473\\
+'OF19': 0.396402\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.043222\\
+'F48': -0.011175\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.751667\\
+'OF19': 0.556543\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.031105\\
+'S2': -0.012739\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.850172\\
+'OF19': 0.528539\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF21': -0.031337\\
+'F48': -0.030173\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.777552\\
+'OF19': 0.557333\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.040786\\
+'F48': -0.007471\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature F41': 0.558198\\
+'Feature OF19': 0.331069\\
+'Feature OF21': 0.124913\\
+'Feature F5': 0.023782\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature OF7': -0.003062\\
+'Feature OF16': -0.003171\\
+'Feature F48': -0.004729\\
+'Feature OF20': -0.008562\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature F41': 1351 points\\
+'Feature OF19': 1285 points\\
+'Feature OF21': 1119 points\\
+'Feature OF24': 1037 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature OF25': 478 points\\
+'Feature F33': 478 points\\
+'Feature F13': 472 points\\
+'Feature F20': 424 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for PR Benefit Models}
+\label{tab:important_features_PR_Benefit}
+\end{table}
+
+
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.671544\\
+'OF21': 0.468303\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.035512\\
+'F62': -0.005597\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.844500\\
+'OF21': 0.403633\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF7': -0.000485\\
+'OF24': -0.000437\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.821696\\
+'OF21': 0.666593\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF3': -0.001737\\
+'F52': -0.001574\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': 0.813527\\
+'F12': 0.655125\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -0.076716\\
+'OF23': -0.049900\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.806301\\
+'OF21': 0.631670\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F12': -0.000092\\
+'OF30': -0.000044\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.184602\\
+'OF13': 0.000152\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': -0.019385\\
+'F35': -0.000665\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F24': 0.038007\\
+'OF19': 0.036784\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF5': -0.044193\\
+'OF20': -0.043179\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': 0.043120\\
+'F34': 0.041926\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF13': -0.000296\\
+'OF2': 0.000000\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': 0.027782\\
+'F5': 0.006478\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF5': -0.000007\\
+'F3a': -0.000003\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF21': 0.129610\\
+'OF20': 0.092130\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F15': -0.013227\\
+'OF16': -0.012066\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.660613\\
+'OF21': 0.500996\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.022330\\
+'OF38': -0.003980\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.898653\\
+'OF21': 0.714826\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.023416\\
+'S2': -0.008183\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.906854\\
+'F41': 0.409029\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F32': -0.004250\\
+'OF22': -0.002480\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.891270\\
+'F41': 0.396657\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F33': -0.004966\\
+'F34': -0.003339\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature OF19': 0.497638\\
+'Feature F41': 0.294398\\
+'Feature OF21': 0.268613\\
+'Feature F12': 0.045374\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature OF22': -0.001403\\
+'Feature OF5': -0.001777\\
+'Feature F20': -0.001792\\
+'Feature OF18': -0.002347\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature OF19': 1294 points\\
+'Feature F41': 1231 points\\
+'Feature OF21': 1143 points\\
+'Feature F1': 1056 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature S1': 430 points\\
+'Feature S2': 407 points\\
+'Feature F68': 354 points\\
+'Feature F20': 269 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for SR Benefit Models}
+\label{tab:important_features_SR_Benefit}
+\end{table}
+
+
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'F45': 0.354192\\
+'F43': 0.223956\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF38': -0.029008\\
+'OF33': -0.021786\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.823320\\
+'F25': 0.050814\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF22': -0.006792\\
+'OF28': -0.006266\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.535820\\
+'OF22': 0.023043\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F23': -0.000647\\
+'F65': -0.000644\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.094504\\
+'F44': 0.097645\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F31': -0.001984\\
+'F25': -0.001022\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.700848\\
+'F22': 0.019314\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF2': -0.002059\\
+'S4': -0.001717\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.430873\\
+'OF27': 0.118516\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF13': -0.000089\\
+'F41': 0.000000\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.150892\\
+'F45': 0.147232\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3d': -0.018913\\
+'F17': -0.014442\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.426430\\
+'F45': 0.233256\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -0.000013\\
+'OF2': 0.000000\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': 0.023293\\
+'F5': 0.008348\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -0.000016\\
+'F54': -0.000006\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.310904\\
+'F45': 0.239989\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF38': -0.012652\\
+'F54': -0.009201\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F45': 0.349817\\
+'F43': 0.231780\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF38': -0.025551\\
+'OF33': -0.022170\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'F45': 0.380422\\
+'F44': 0.171212\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3c': -0.042531\\
+'OF38': -0.036337\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F45': 2.335171\\
+'F24': 1.789909\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF31': -0.330208\\
+'F3c': -0.245296\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F45': 0.448860\\
+'F52': 0.173472\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3c': -0.036481\\
+'OF38': -0.032400\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 0.563853\\
+'Feature F45': 0.320945\\
+'Feature F24': 0.140763\\
+'Feature OF21': 0.114374\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F58': -0.013924\\
+'Feature OF38': -0.021798\\
+'Feature F3c': -0.026023\\
+'Feature OF31': -0.028798\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 1365 points\\
+'Feature F45': 1260 points\\
+'Feature F31': 1135 points\\
+'Feature F24': 1130 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F21': 426 points\\
+'Feature S2': 384 points\\
+'Feature OF34': 377 points\\
+'Feature OF2': 255 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for SR Models}
+\label{tab:important_features_SR}
+\end{table}
+
+
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF10': 0.434765\\
+'OF19': 0.414841\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F29': -0.029499\\
+'OF33': -0.025170\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF10': 0.796662\\
+'OF19': 0.563827\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F51': -0.001892\\
+'OF23': -0.000782\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF10': 0.671728\\
+'OF19': 0.464892\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F65': -0.004832\\
+'OF3': -0.003717\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF10': 0.836535\\
+'OF19': 0.444950\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF3': -0.003660\\
+'OF5': -0.003092\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF10': 0.708734\\
+'OF19': 0.393413\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF3': -0.009379\\
+'OF5': -0.007220\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.327369\\
+'OF27': 0.003880\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF26': -0.002144\\
+'F24': -0.001972\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F35': 0.309029\\
+'F34': 0.088340\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': -0.878888\\
+'F3g': -0.151826\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'OF9': 0.106174\\
+'OF10': 0.081926\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF5': -0.039847\\
+'OF27': -0.021988\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.012487\\
+'OF9': 0.000024\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': -0.005404\\
+'OF5': -0.000020\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF10': 0.142219\\
+'OF9': 0.092250\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF3': -0.025231\\
+'OF5': -0.021868\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF10': 0.424293\\
+'OF21': 0.421672\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F29': -0.034079\\
+'OF33': -0.024907\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'OF21': 0.607966\\
+'OF19': 0.595742\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF33': -0.018405\\
+'F3g': -0.016241\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF10': 0.845077\\
+'F50': 0.680531\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.141968\\
+'OF21': -0.098952\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF19': 0.630024\\
+'OF21': 0.585880\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF33': -0.017230\\
+'F7': -0.015492\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature OF10': 0.417809\\
+'Feature OF19': 0.312239\\
+'Feature OF21': 0.205786\\
+'Feature F41': 0.075133\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature OF6': -0.007846\\
+'Feature OF25': -0.008854\\
+'Feature F3g': -0.014606\\
+'Feature OF27': -0.065078\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature OF10': 1342 points\\
+'Feature OF19': 1236 points\\
+'Feature F41': 1198 points\\
+'Feature OF21': 1189 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F25': 433 points\\
+'Feature OF3': 372 points\\
+'Feature OF5': 358 points\\
+'Feature F36': 356 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for NR Benefit Models}
+\label{tab:important_features_NR_Benefit}
+\end{table}
+
+
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 0.901439\\
+'OF23': 0.333440\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF37': -0.087702\\
+'F20': -0.063504\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 1.460172\\
+'OF23': 0.207532\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F23': -0.006009\\
+'OF5': -0.003486\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 1.489140\\
+'OF23': 0.131793\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F41': -0.003486\\
+'F65': -0.002410\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F53': 7.896065\\
+'OF24': 0.623784\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF18': -2.847741\\
+'OF22': -0.226609\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 1.300579\\
+'OF23': 0.082517\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F21': -0.001078\\
+'OF34': -0.000603\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': 0.359802\\
+'F5': 0.237931\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F35': -0.000053\\
+'F45': -0.000035\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F2': 2.912182\\
+'F6': 0.921916\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': -9.126598\\
+'F3c': -2.098251\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 0.411531\\
+'F54': 0.084062\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': -0.020583\\
+'F31': -0.001072\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'OF27': 0.028316\\
+'OF5': 0.000032\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': -0.001905\\
+'OF18': -0.000007\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 0.851256\\
+'OF23': 0.199564\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F20': -0.033465\\
+'OF11': -0.023769\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 0.835658\\
+'F24': 0.376621\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF37': -0.072615\\
+'F20': -0.055666\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 0.888735\\
+'OF23': 0.385073\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF37': -0.178323\\
+'OF21': -0.095820\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': 3.351361\\
+'OF21': 3.174862\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'S2': -0.562348\\
+'OF6': -0.521871\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF17': 0.850844\\
+'OF23': 0.332914\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF37': -0.128644\\
+'F20': -0.045430\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature OF17': 0.671066\\
+'Feature F53': 0.620027\\
+'Feature OF20': 0.235132\\
+'Feature OF21': 0.218170\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F33': -0.103096\\
+'Feature F3c': -0.145086\\
+'Feature F3d': -0.161077\\
+'Feature F5': -0.651739\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature OF17': 1307 points\\
+'Feature F52': 1237 points\\
+'Feature OF23': 1212 points\\
+'Feature F51': 1189 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F64': 381 points\\
+'Feature F67': 376 points\\
+'Feature F33': 369 points\\
+'Feature F5': 323 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for WS Benefit Models}
+\label{tab:important_features_WS_Benefit}
+\end{table}
+
+
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Model} & \textbf{Top 2 Important Features} & \textbf{Bottom 2 Important Features} \\
+\hline
+Ridge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.068454\\
+'F50': 0.068869\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.020697\\
+'OF11': -0.012037\\
+\end{tabular} \\
+\hline
+DecisionTreeRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.323816\\
+'OF28': 0.159743\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F65': -0.007496\\
+'OF16': -0.006533\\
+\end{tabular} \\
+\hline
+GradientBoostingRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.196512\\
+'OF28': 0.082922\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F47': -0.001079\\
+'F18': -0.000807\\
+\end{tabular} \\
+\hline
+RandomForestRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'OF28': 0.538508\\
+'OF22': 0.071115\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': -1.649695\\
+'OF18': -0.549475\\
+\end{tabular} \\
+\hline
+AdaBoostRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.969779\\
+'OF28': 0.094944\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF5': -0.004574\\
+'F3f': -0.002689\\
+\end{tabular} \\
+\hline
+KNeighborsRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.763124\\
+'OF27': 0.157415\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF13': -0.000378\\
+'OF9': -0.000315\\
+\end{tabular} \\
+\hline
+MLPRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F45': 1.611972\\
+'F3b': 0.504369\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3a': -0.517319\\
+'OF2': -0.487867\\
+\end{tabular} \\
+\hline
+ElasticNet & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.821764\\
+'OF18': 0.086786\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF2': 0.000000\\
+'F39': 0.000000\\
+\end{tabular} \\
+\hline
+SVR & 
+\begin{tabular}[c]{@{}l@{}}
+'F5': 0.059692\\
+'OF27': 0.027247\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F3g': -0.000010\\
+'OF2': -0.000007\\
+\end{tabular} \\
+\hline
+BayesianRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 0.769779\\
+'OF18': 0.039686\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.017260\\
+'OF11': -0.013994\\
+\end{tabular} \\
+\hline
+KernelRidge & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.045855\\
+'F50': 0.051678\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF20': -0.029024\\
+'OF11': -0.014729\\
+\end{tabular} \\
+\hline
+LinearRegression & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.074091\\
+'F50': 0.103631\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'S2': -0.015593\\
+'OF20': -0.012721\\
+\end{tabular} \\
+\hline
+RANSACRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 2.910780\\
+'F45': 0.534127\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'F9': -0.129027\\
+'F23': -0.081989\\
+\end{tabular} \\
+\hline
+TheilSenRegressor & 
+\begin{tabular}[c]{@{}l@{}}
+'F43': 1.144618\\
+'F6': 0.082759\\
+\end{tabular} & 
+\begin{tabular}[c]{@{}l@{}}
+'OF21': -0.062422\\
+'OF20': -0.053491\\
+\end{tabular} \\
+\hline
+\textbf{Average Importance} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 0.755861\\
+'Feature F45': 0.141279\\
+'Feature F5': 0.083083\\
+'Feature OF28': 0.061002\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F3e': -0.012449\\
+'Feature F3d': -0.015819\\
+'Feature OF13': -0.020652\\
+'Feature F3a': -0.025738\\
+\end{tabular} \\ \hline\textbf{Voting System} & \begin{tabular}[c]{@{}l@{}}'Feature F43': 1158 points\\
+'Feature OF18': 1122 points\\
+'Feature F1': 1100 points\\
+'Feature OF28': 1080 points\\
+\end{tabular} & \begin{tabular}[c]{@{}l@{}}'Feature F62': 425 points\\
+'Feature S2': 416 points\\
+'Feature F22': 366 points\\
+'Feature F20': 362 points\\
+\end{tabular} \\ \hline
+\end{tabular}
+\caption{Features for SFST Benefit Models}
+\label{tab:important_features_SFST_Benefit}
+\end{table}
+

@@ -1,0 +1,10 @@
+csv_file,model_name,hyperparameters,rmse
+output_custom_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'invscaling', 'mlpregressor__solver': 'lbfgs'}",0.4932044129936715
+output_ffill_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100, 100), 'mlpregressor__learning_rate': 'invscaling', 'mlpregressor__solver': 'lbfgs'}",0.5556766032875987
+output_interpolated.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100, 100), 'mlpregressor__learning_rate': 'adaptive', 'mlpregressor__solver': 'lbfgs'}",0.5502222795687083
+output_iterative_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'adaptive', 'mlpregressor__solver': 'lbfgs'}",0.4166287358029346
+output_knn_imputed_custom.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.4675046258696927
+output_mean_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100, 100), 'mlpregressor__learning_rate': 'adaptive', 'mlpregressor__solver': 'lbfgs'}",0.3580324565812138
+output_mode_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100, 100), 'mlpregressor__learning_rate': 'invscaling', 'mlpregressor__solver': 'lbfgs'}",0.27842433596691485
+output_median_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (50, 50, 50), 'mlpregressor__learning_rate': 'constant', 'mlpregressor__solver': 'lbfgs'}",0.45086914431675046
+output_bfill_imputed.csv,MLPRegressor,"{'mlpregressor__activation': 'logistic', 'mlpregressor__hidden_layer_sizes': (100, 100, 100), 'mlpregressor__learning_rate': 'adaptive', 'mlpregressor__solver': 'lbfgs'}",0.5477844660127696

@@ -1,0 +1,62 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Feature} & \textbf{\ac{NNorm} MSE} & \textbf{\ac{Norm} MSE} & \textbf{Model} & \textbf{Dataset} \\
+\hline
+NR & 0.15 & 0.43 & AdaBoostRegressor & ffill \\
+\hline
+PR & 0.11 & 0.18 & AdaBoostRegressor & custom \\
+\hline
+SR & 0.08 & 0.13 & MLPRegressor & custom \\
+\hline
+SFST & 0.16 & 0.26 & AdaBoostRegressor & knn \\
+\hline
+WS & 0.10 & 0.19 & MLPRegressor & mode \\
+\hline
+NR\_Benefit & 0.08 & 0.09 & MLPRegressor & mode \\
+\hline
+PR\_Benefit & 0.01 & 0.01 & TheilSenRegressor & custom \\
+\hline
+SR\_Benefit & 0.07 & 0.09 & RANSACRegressor & custom \\
+\hline
+SFST\_Benefit & 1.66 & 3.22 & RANSACRegressor & interpolated.csv \\
+\hline
+WS\_Benefit & 0.53 & 0.54 & RandomForestRegressor & custom \\
+\hline
+\end{tabular}
+\caption{Best MSE for Non-Normalized and Normalized Data with Algorithm and Dataset}
+\label{reg_spec_tab:norm_mse}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Feature} & \textbf{Model} & \textbf{Dataset} & \textbf{MSE} \\
+\hline
+NR & AdaBoostRegressor & iterative & 0.24 \\
+\hline
+PR & AdaBoostRegressor & iterative & 0.24 \\
+\hline
+SR & MLPRegressor & custom & 0.27 \\
+\hline
+SFST & AdaBoostRegressor & mean & 0.20 \\
+\hline
+WS & MLPRegressor & knn & 0.08 \\
+\hline
+NR\_Benefit & MLPRegressor & custom & 0.07 \\
+\hline
+PR\_Benefit & TheilSenRegressor & knn & 0.01 \\
+\hline
+SR\_Benefit & SGDRegressor & mean & 0.01 \\
+\hline
+SFST\_Benefit & Ridge & iterative & 4.37 \\
+\hline
+WS\_Benefit & DecisionTreeRegressor & mean & 0.11 \\
+\hline
+\end{tabular}
+\caption{Best MSE for \ac{PNorm} Data}
+\label{reg_spec_tab:pre_norm_mse}
+\end{table}
