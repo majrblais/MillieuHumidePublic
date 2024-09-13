@@ -1,6 +1,7 @@
 # Results
 
 This directory contains the outputs and analysis scripts for the training processes. Each ecosystem function has its own subfolder containing the saved models, validation results, and optimized parameters.
+The results are seperated in a folder named `csvs` and 10 csv files containing the best models information.
 
 ## Subfolders in ./csvs
 
@@ -14,7 +15,7 @@ Each subfolder also contains 9 CSV files (one for each data filling method). The
 - **Actual**: The actual validation data point.
 - **Predicted**: The predicted validation data point by the model.
 - **Model**: The model used for the prediction.
-
+
 ## Best Models Information
 
 In the current folder, there is a CSV file for each ecosystem function named `best_models_infoXXX.csv`, where `XXX` is the ecosystem function name. These CSV files contain the following columns:

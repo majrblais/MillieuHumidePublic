@@ -3,7 +3,6 @@
 This directory contains code and resources for regression, organized based on the features utilized by the algorithms.
 
 ## Subfolders
-
 ### All_features
 Contains code for training regression models using all available features, as well as methods for feature selection and ensemble learning.
 More information can be found [here](./All_features)
@@ -14,7 +13,7 @@ More information can be found [here](./All_features)
 - **FeatureSelection**: Scripts for applying feature reduction algorithms.
 - **ClassGrouping**: Scripts for applying feature reduction algorithms.
 
-- **Dimension_Reduction(Discontinued)**: Scripts for Dimesnion Reduction (disc)
+- **DimensionReduction (Disc)**: Code to reduce the input dimension using techniques such as PCA.
 
 ### Specific_features
 This subfolder is designated for regression algorithms trained on specific features focusing on particular ecosystem functions derived from the WESP-AC.
@@ -27,6 +26,12 @@ More information can be found [here](./Specific_features)
 
 ## Usage
 Refer to the respective subfolder READMEs for detailed instructions on running the code and reproducing results.
+Generally for both all features and specific features:
+
+1. Generate the data using `Data_ML`
+2. Train the models using the `Training` folder.
+3. Use `TrainingResults`, `EnsembleLearning` and `ClassGrouping` to get results for the training algorithms directly.
+4. Use the `FeatureSelection` to reduce the features, it also contains the ensemble learning and class grouping.
 
 ## Future Work
 - Adding code for training on specific features in the `Specific_features` subfolder.

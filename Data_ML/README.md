@@ -61,6 +61,7 @@ Our CSVS are seperated in order using 1_,2_ and 3_\* for classification and regr
 
 
 ### Scripts
+The scripts are divided in order using prefix such as 1_, 2_... to determine which order to launch them.
 1. **data_NRNB_to_wespac.ipynb**
    - Converts `data_NRNB.xlsx` data to individual WESP-AC files using `wespac_3.4.xlsx`.
    - Output: Individual WESP-AC files in the `wespacs` folder.
@@ -82,7 +83,7 @@ Our CSVS are seperated in order using 1_,2_ and 3_\* for classification and regr
    - Output: Filled CSV files saved in the `out_csvs_regression` folder.
 
 7. **add_xtra.ipynb.ipynb**
-   - Add extra features to datasets.  
+   - Add extra features to datasets. No need for filling but could be replaced.
    
 
 8. **stats.ipynb**

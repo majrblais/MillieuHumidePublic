@@ -223,7 +223,7 @@ def process_csv(file_path):
     return best_model_info
 
 # Get the list of CSV files in the directory
-csv_files = glob.glob('../All_data/*.csv')
+csv_files = glob.glob('../../../Data_ML/4_out_csvs_classification/*.csv')
 
 # Initialize a list to store the best model information for each CSV file
 best_models_info = []

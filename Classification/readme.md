@@ -7,7 +7,6 @@ This directory contains code and resources for classification, organized based o
 ### All_features
 Contains code for training classification models using all available features, as well as methods for feature selection and ensemble learning.
 More information can be found [here](./All_features)
-
 - **Training_norm/Training_non_norm**: Scripts and notebooks for training models, feature selection, and ensemble learning.
 - **TrainingResults**: Contains the results from Training_norm and Training_non_norm.
 - **EnsembleLearning**: Scripts for performing ensemble learning on the best models.
@@ -25,6 +24,10 @@ More information can be found [here](./Specific_features)
 
 ## Usage
 Refer to the respective subfolder READMEs for detailed instructions on running the code and reproducing results.
+Generally, for both all and specific features :
+1. Use the data generated in the upfolder `Data_ML` with the `Training` folders
+2. Use `TrainingResults` and `EnsembleLearning` to get basic results and information
+3. Use `FeatureSelection` to reduce the feature, it also contains the ensemble learning for feature selection.
 
 ## Future Work
 - Adding code for training on specific features in the `Specific_features` subfolder.
